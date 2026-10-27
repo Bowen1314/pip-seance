@@ -1,0 +1,23 @@
+{
+  "name": "pip-seance-agent",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "worker": "tsx src/worker.ts",
+    "seance": "tsx src/client.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "^3.0.79",
+    "@mastra/core": "^1.79.0",
+    "@temporalio/activity": "^1.24.0",
+    "@temporalio/client": "^1.24.0",
+    "@temporalio/worker": "^1.24.0",
+    "@temporalio/workflow": "^1.24.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

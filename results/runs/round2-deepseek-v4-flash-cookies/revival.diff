@@ -1,0 +1,14 @@
+diff -ruN -x __pycache__ -x .pytest_cache a/cookies/cookies.py b/cookies/cookies.py
+--- a/cookies/cookies.py	2014-09-26 22:36:25.000000000 -0400
++++ b/cookies/cookies.py	2026-10-27 11:25:23.637628798 -0400
+@@ -203,7 +203,9 @@
+     # Here is the overall date format; ~99% of cases fold into one generalized
+     # syntax like RFC 1123, and many of the rest use asctime-like formats.
+     # (see test_date_formats for a full exegesis)
+-    DATE = """(?ix) # Case-insensitive mode, verbose mode
++    DATE = """(?ix:
++          (?:
++              (?P<weekday>(?:{wdy}|{weekday}),[ ])?
+         (?:
+             (?P<weekday>(?:{wdy}|{weekday}),[ ])?
+             (?P<day>{day})

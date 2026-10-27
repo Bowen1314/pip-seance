@@ -1,0 +1,40 @@
+diff -ruN -x __pycache__ -x .pytest_cache a/paver/distutils/__init__.py b/paver/distutils/__init__.py
+--- a/paver/distutils/__init__.py	1969-12-31 19:00:00.000000000 -0500
++++ b/paver/distutils/__init__.py	2026-10-27 11:10:58.249887089 -0400
+@@ -0,0 +1,10 @@
++"""Compatibility shim: distutils was removed in Python 3.12.
++
++This package re-exports the vendored distutils that ships with setuptools
++so that code written against the old ``distutils`` still works.
++"""
++import sys
++
++import setuptools._distutils as _distutils
++
++sys.modules[__name__] = _distutils
+\ No newline at end of file
+diff -ruN -x __pycache__ -x .pytest_cache a/paver/nose/__init__.py b/paver/nose/__init__.py
+--- a/paver/nose/__init__.py	1969-12-31 19:00:00.000000000 -0500
++++ b/paver/nose/__init__.py	2026-10-27 11:10:58.251887091 -0400
+@@ -0,0 +1 @@
++"""Minimal nose compatibility shim (nose is not installed on Python 3.13)."""
+\ No newline at end of file
+diff -ruN -x __pycache__ -x .pytest_cache a/paver/nose/plugins/skip.py b/paver/nose/plugins/skip.py
+--- a/paver/nose/plugins/skip.py	1969-12-31 19:00:00.000000000 -0500
++++ b/paver/nose/plugins/skip.py	2026-10-27 11:10:58.259887098 -0400
+@@ -0,0 +1,4 @@
++"""Minimal nose.plugins.skip compatibility shim."""
++import unittest
++
++SkipTest = unittest.SkipTest
+\ No newline at end of file
+diff -ruN -x __pycache__ -x .pytest_cache a/paver/paver/_probe.py b/paver/paver/_probe.py
+--- a/paver/paver/_probe.py	1969-12-31 19:00:00.000000000 -0500
++++ b/paver/paver/_probe.py	2026-10-27 11:10:56.511885560 -0400
+@@ -0,0 +1,5 @@
++try:
++    import setuptools
++    print("SETUPTOOLS AVAILABLE", setuptools.__version__)
++except Exception as e:
++    print("SETUPTOOLS NOT AVAILABLE", repr(e))
+\ No newline at end of file

@@ -1,0 +1,48 @@
+diff -ruN -x __pycache__ -x .pytest_cache a/money/src/money/money.py b/money/src/money/money.py
+--- a/money/src/money/money.py	2016-04-17 09:41:45.000000000 -0400
++++ b/money/src/money/money.py	2026-10-27 11:12:03.189944232 -0400
+@@ -3,7 +3,43 @@
+ """
+ import decimal
+ import re
+-from distutils.version import StrictVersion
++
++try:
++    from distutils.version import StrictVersion
++except ImportError:
++    try:
++        from packaging.version import Version as StrictVersion
++    except ImportError:
++        class StrictVersion(object):
++            """Minimal StrictVersion fallback (distutils removed in 3.12)"""
++            def __init__(self, vstring=None):
++                self.version = vstring
++
++            def _key(self):
++                return tuple(int(x) for x in self.version.split('.'))
++
++            def _cmp(self, other):
++                if isinstance(other, str):
++                    other = StrictVersion(other)
++                return (self._key() > other._key()) - (self._key() < other._key())
++
++            def __lt__(self, other):
++                return self._cmp(other) < 0
++
++            def __le__(self, other):
++                return self._cmp(other) <= 0
++
++            def __eq__(self, other):
++                return self._cmp(other) == 0
++
++            def __ne__(self, other):
++                return self._cmp(other) != 0
++
++            def __gt__(self, other):
++                return self._cmp(other) > 0
++
++            def __ge__(self, other):
++                return self._cmp(other) >= 0
+ 
+ from .exchange import xrates
+ from .exceptions import (CurrencyMismatch, ExchangeRateNotFound,

@@ -1,0 +1,12 @@
+diff -ruN -x __pycache__ -x .pytest_cache a/null/src/null.py b/null/src/null.py
+--- a/null/src/null.py	2013-03-05 05:14:52.000000000 -0500
++++ b/null/src/null.py	2026-10-27 11:10:09.601844282 -0400
+@@ -32,7 +32,7 @@
+ from __future__ import unicode_literals
+ 
+ 
+-from collections import MutableMapping, MutableSequence
++from collections.abc import MutableMapping, MutableSequence
+ 
+ import six
+ 

@@ -1,0 +1,3862 @@
+{
+ "source": {
+  "source": "https://hugovk.dev/top-pypi-packages/top-pypi-packages.min.json",
+  "dataset_updated": "2026-10-01 12:40:51",
+  "checked": 15000,
+  "cutoff": "2018-01-01"
+ },
+ "undead": 427,
+ "status": {
+  "still_alive": 35,
+  "no_tests": 245,
+  "not_alive_on_38": 109,
+  "native_code": 16,
+  "ghost": 10,
+  "no_sdist": 12
+ },
+ "packages": [
+  {
+   "project": "retry",
+   "version": "0.9.2",
+   "last_upload": "2016-05-11T13:58:51.541112Z",
+   "downloads_30d": 24708970,
+   "status": "still_alive",
+   "py38_passed": 9,
+   "py313_passed": 9
+  },
+  {
+   "project": "docopt",
+   "version": "0.6.2",
+   "last_upload": "2014-06-16T11:18:57.406351Z",
+   "downloads_30d": 21437379,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "lockfile",
+   "version": "0.12.2",
+   "last_upload": "2015-11-25T18:29:58.279992Z",
+   "downloads_30d": 15040945,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "ansicolors",
+   "version": "1.1.8",
+   "last_upload": "2017-06-02T21:22:12.670271Z",
+   "downloads_30d": 14386963,
+   "status": "still_alive",
+   "py38_passed": 22,
+   "py313_passed": 22
+  },
+  {
+   "project": "argparse",
+   "version": "1.4.0",
+   "last_upload": "2015-09-14T16:03:16.137978Z",
+   "downloads_30d": 12599686,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pysftp",
+   "version": "0.2.9",
+   "last_upload": "2016-07-06T00:19:28.988747Z",
+   "downloads_30d": 11990233,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pycrypto",
+   "version": "2.6.1",
+   "last_upload": "2014-06-20T08:10:20.813938Z",
+   "downloads_30d": 9420356,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "protobuf3-to-dict",
+   "version": "0.1.5",
+   "last_upload": "2017-02-23T04:43:57.047050Z",
+   "downloads_30d": 9073922,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "crcmod",
+   "version": "1.7",
+   "last_upload": "2010-07-20T13:52:25.465775Z",
+   "downloads_30d": 8122858,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "sgmllib3k",
+   "version": "1.0.0",
+   "last_upload": "2010-08-24T14:33:52.445724Z",
+   "downloads_30d": 8050171,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "xlwt",
+   "version": "1.3.0",
+   "last_upload": "2017-08-22T06:47:16.498949Z",
+   "downloads_30d": 7756205,
+   "status": "still_alive",
+   "py38_passed": 23,
+   "py313_passed": 23
+  },
+  {
+   "project": "nose",
+   "version": "1.3.7",
+   "last_upload": "2015-06-02T09:12:40.570975Z",
+   "downloads_30d": 6495252,
+   "status": "still_alive",
+   "py38_passed": 19,
+   "py313_passed": 19
+  },
+  {
+   "project": "stringcase",
+   "version": "1.2.0",
+   "last_upload": "2017-08-06T01:40:57.021784Z",
+   "downloads_30d": 6058367,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "unicodecsv",
+   "version": "0.14.1",
+   "last_upload": "2015-09-22T22:00:19.516621Z",
+   "downloads_30d": 5755828,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "probableparsing",
+   "version": "0.0.1",
+   "last_upload": "2016-12-19T15:04:32.102750Z",
+   "downloads_30d": 5142745,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "ipython-genutils",
+   "version": "0.2.0",
+   "last_upload": "2017-03-13T22:12:26.393629Z",
+   "downloads_30d": 4417466,
+   "status": "not_alive_on_38",
+   "py38_passed": 2,
+   "py313_passed": null
+  },
+  {
+   "project": "pyaes",
+   "version": "1.6.1",
+   "last_upload": "2017-09-20T21:17:54.230245Z",
+   "downloads_30d": 3941927,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "multi-key-dict",
+   "version": "2.0.3",
+   "last_upload": "2015-09-20T19:49:13.425785Z",
+   "downloads_30d": 3917335,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "wget",
+   "version": "3.2",
+   "last_upload": "2015-10-22T15:26:37.510547Z",
+   "downloads_30d": 3338879,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pdfrw",
+   "version": "0.4",
+   "last_upload": "2017-09-18T10:08:10.732666Z",
+   "downloads_30d": 3288470,
+   "status": "still_alive",
+   "py38_passed": 11,
+   "py313_passed": 11
+  },
+  {
+   "project": "uuid",
+   "version": "1.30",
+   "last_upload": "2007-05-26T11:13:24Z",
+   "downloads_30d": 2693620,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "funcsigs",
+   "version": "1.0.2",
+   "last_upload": "2016-04-25T22:22:33.882246Z",
+   "downloads_30d": 2682696,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pandasql",
+   "version": "0.7.3",
+   "last_upload": "2016-04-20T21:52:47.564507Z",
+   "downloads_30d": 2530803,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "gnupg",
+   "version": "2.3.1",
+   "last_upload": "2017-09-06T23:51:24.876793Z",
+   "downloads_30d": 2488031,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "google-api",
+   "version": "0.1.12",
+   "last_upload": "2017-09-05T11:22:17.834669Z",
+   "downloads_30d": 2264812,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "json-logic",
+   "version": "0.6.3",
+   "last_upload": "2017-03-31T11:22:51.672378Z",
+   "downloads_30d": 2231142,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "word2number",
+   "version": "1.1",
+   "last_upload": "2017-06-02T15:45:14.488024Z",
+   "downloads_30d": 2041494,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "fpdf",
+   "version": "1.7.2",
+   "last_upload": "2015-01-22T23:39:58.960367Z",
+   "downloads_30d": 1841190,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "testing-common-database",
+   "version": "2.0.3",
+   "last_upload": "2017-10-23T15:02:40.781630Z",
+   "downloads_30d": 1835859,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "azure-cosmosdb-nspkg",
+   "version": "2.0.2",
+   "last_upload": "2017-10-05T01:51:56.931896Z",
+   "downloads_30d": 1760157,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "testing-postgresql",
+   "version": "1.3.0",
+   "last_upload": "2016-02-04T13:57:11.857386Z",
+   "downloads_30d": 1676093,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "jsonpath-rw",
+   "version": "1.4.0",
+   "last_upload": "2015-04-19T01:47:15.060153Z",
+   "downloads_30d": 1610270,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "ratelim",
+   "version": "0.1.6",
+   "last_upload": "2015-02-27T18:06:08.530152Z",
+   "downloads_30d": 1542474,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "dbfread",
+   "version": "2.0.7",
+   "last_upload": "2016-11-25T11:27:36.001530Z",
+   "downloads_30d": 1411557,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "proxy-tools",
+   "version": "0.1.0",
+   "last_upload": "2014-05-05T21:02:24.606594Z",
+   "downloads_30d": 1335658,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "colour",
+   "version": "0.1.5",
+   "last_upload": "2017-11-19T23:20:08.015286Z",
+   "downloads_30d": 1320738,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pyinotify",
+   "version": "0.9.6",
+   "last_upload": "2015-06-04T15:50:23.633153Z",
+   "downloads_30d": 1304890,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "python3-xlib",
+   "version": "0.15",
+   "last_upload": "2014-05-31T12:28:59.603677Z",
+   "downloads_30d": 1225120,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "miscreant",
+   "version": "0.3.0",
+   "last_upload": "2017-12-25T20:40:53.734053Z",
+   "downloads_30d": 1218668,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "zipfile36",
+   "version": "0.1.3",
+   "last_upload": "2016-10-16T13:09:03.325525Z",
+   "downloads_30d": 1178018,
+   "status": "ghost",
+   "py38_passed": 168,
+   "py313_passed": 0
+  },
+  {
+   "project": "pep8",
+   "version": "1.7.1",
+   "last_upload": "2017-10-24T14:39:13.198768Z",
+   "downloads_30d": 1130176,
+   "status": "ghost",
+   "py38_passed": 29,
+   "py313_passed": 25
+  },
+  {
+   "project": "langid",
+   "version": "1.1.6",
+   "last_upload": "2016-04-05T22:34:15.786424Z",
+   "downloads_30d": 1125748,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "boa-str",
+   "version": "1.1.0",
+   "last_upload": "2017-07-10T22:08:13.372571Z",
+   "downloads_30d": 1114248,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "geohash2",
+   "version": "1.1",
+   "last_upload": "2017-07-06T13:43:07.913737Z",
+   "downloads_30d": 1108915,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "csscompressor",
+   "version": "0.9.5",
+   "last_upload": "2017-11-26T21:13:08.238226Z",
+   "downloads_30d": 1097245,
+   "status": "still_alive",
+   "py38_passed": 72,
+   "py313_passed": 72
+  },
+  {
+   "project": "ummalqura",
+   "version": "2.0.1",
+   "last_upload": "2017-12-26T13:04:04.882177Z",
+   "downloads_30d": 1063636,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "clamd",
+   "version": "1.0.2",
+   "last_upload": "2014-08-21T14:58:22.946918Z",
+   "downloads_30d": 1057532,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "coreapi",
+   "version": "2.3.3",
+   "last_upload": "2017-10-05T14:04:40.687050Z",
+   "downloads_30d": 1009975,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "requests-oauth",
+   "version": "0.4.1",
+   "last_upload": "2012-06-21T09:10:36.404143Z",
+   "downloads_30d": 1004611,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "coreschema",
+   "version": "0.0.4",
+   "last_upload": "2017-02-08T12:23:51.003599Z",
+   "downloads_30d": 995561,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "traceback2",
+   "version": "1.4.0",
+   "last_upload": "2015-03-09T06:57:35.150790Z",
+   "downloads_30d": 985105,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "linecache2",
+   "version": "1.0.0",
+   "last_upload": "2015-03-06T01:33:36.657840Z",
+   "downloads_30d": 982869,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "ocspbuilder",
+   "version": "0.10.2",
+   "last_upload": "2016-07-29T14:58:50.176148Z",
+   "downloads_30d": 977435,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "nothing",
+   "version": "0.0.3",
+   "last_upload": "2015-12-25T18:18:29.169323Z",
+   "downloads_30d": 976813,
+   "status": "no_sdist",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "whoosh",
+   "version": "2.7.4",
+   "last_upload": "2016-04-04T01:19:40.379497Z",
+   "downloads_30d": 976405,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "ocspresponder",
+   "version": "0.5.0",
+   "last_upload": "2016-05-02T09:15:52.174587Z",
+   "downloads_30d": 976402,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pytest-cache",
+   "version": "1.0",
+   "last_upload": "2013-06-04T19:19:00.551314Z",
+   "downloads_30d": 964435,
+   "status": "still_alive",
+   "py38_passed": 3,
+   "py313_passed": 3
+  },
+  {
+   "project": "cbor",
+   "version": "1.0.0",
+   "last_upload": "2016-02-09T23:11:12.726807Z",
+   "downloads_30d": 950108,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "visitor",
+   "version": "0.1.3",
+   "last_upload": "2016-05-18T19:27:53.383175Z",
+   "downloads_30d": 947240,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "flask-bootstrap",
+   "version": "3.3.7.1",
+   "last_upload": "2017-01-11T23:28:23.944261Z",
+   "downloads_30d": 940527,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "strict-rfc3339",
+   "version": "0.7",
+   "last_upload": "2016-04-24T04:24:04.403344Z",
+   "downloads_30d": 935953,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "www-authenticate",
+   "version": "0.9.2",
+   "last_upload": "2015-08-05T08:18:38.686494Z",
+   "downloads_30d": 926924,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pymeta3",
+   "version": "0.5.1",
+   "last_upload": "2015-02-22T16:30:06.858725Z",
+   "downloads_30d": 873095,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "wikipedia",
+   "version": "1.4.0",
+   "last_upload": "2014-11-15T15:59:49.808169Z",
+   "downloads_30d": 859719,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pyandoc",
+   "version": "0.2.0",
+   "last_upload": "2016-02-04T10:33:20.891199Z",
+   "downloads_30d": 857549,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "htmlmin",
+   "version": "0.1.12",
+   "last_upload": "2017-12-29T16:41:36.589939Z",
+   "downloads_30d": 829374,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "dockerpty",
+   "version": "0.4.1",
+   "last_upload": "2016-02-04T18:57:13.442227Z",
+   "downloads_30d": 815667,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "xlutils",
+   "version": "2.0.0",
+   "last_upload": "2016-06-09T05:27:51.146173Z",
+   "downloads_30d": 790630,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "unittest2",
+   "version": "1.1.0",
+   "last_upload": "2015-06-30T06:48:35.477761Z",
+   "downloads_30d": 776737,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "validate-email",
+   "version": "1.3",
+   "last_upload": "2015-03-23T04:22:45.115283Z",
+   "downloads_30d": 775519,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "patch",
+   "version": "1.16",
+   "last_upload": "2016-02-13T15:18:58.285721Z",
+   "downloads_30d": 774372,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "parsley",
+   "version": "1.3",
+   "last_upload": "2015-09-09T02:53:09.977884Z",
+   "downloads_30d": 771824,
+   "status": "still_alive",
+   "py38_passed": 275,
+   "py313_passed": 275
+  },
+  {
+   "project": "tonyg-rfc3339",
+   "version": "0.1",
+   "last_upload": "2015-12-05T00:28:10.966204Z",
+   "downloads_30d": 767981,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "flake8-polyfill",
+   "version": "1.0.2",
+   "last_upload": "2017-12-30T13:46:58.138183Z",
+   "downloads_30d": 764470,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "gender-guesser",
+   "version": "0.4.0",
+   "last_upload": "2016-12-05T11:41:47.759557Z",
+   "downloads_30d": 745952,
+   "status": "still_alive",
+   "py38_passed": 6,
+   "py313_passed": 6
+  },
+  {
+   "project": "hexdump",
+   "version": "3.3",
+   "last_upload": "2016-01-22T14:40:19.589402Z",
+   "downloads_30d": 743620,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "metaphone",
+   "version": "0.6",
+   "last_upload": "2016-08-24T14:37:29.687986Z",
+   "downloads_30d": 741561,
+   "status": "still_alive",
+   "py38_passed": 27,
+   "py313_passed": 27
+  },
+  {
+   "project": "rauth",
+   "version": "0.7.3",
+   "last_upload": "2017-01-22T16:51:43.645153Z",
+   "downloads_30d": 737464,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "jinja2-time",
+   "version": "0.2.0",
+   "last_upload": "2016-06-08T23:36:52.454491Z",
+   "downloads_30d": 729586,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "jstyleson",
+   "version": "0.0.2",
+   "last_upload": "2016-06-21T14:38:54.305660Z",
+   "downloads_30d": 722829,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "backports-weakref",
+   "version": "1.0.post1",
+   "last_upload": "2017-09-17T20:58:26.557727Z",
+   "downloads_30d": 721208,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "tool",
+   "version": "0.8.0",
+   "last_upload": "2011-11-25T14:50:47.079612Z",
+   "downloads_30d": 719443,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "crypto",
+   "version": "1.4.1",
+   "last_upload": "2015-05-14T00:41:50.011865Z",
+   "downloads_30d": 703084,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pyqrcode",
+   "version": "1.2.1",
+   "last_upload": "2016-06-20T03:28:07.967347Z",
+   "downloads_30d": 701046,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "backports-tempfile",
+   "version": "1.0",
+   "last_upload": "2017-10-13T11:34:18.576190Z",
+   "downloads_30d": 697159,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "tzwhere",
+   "version": "3.0.3",
+   "last_upload": "2017-08-24T14:18:13.705491Z",
+   "downloads_30d": 677360,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "simplegeneric",
+   "version": "0.8.1",
+   "last_upload": "2012-04-01T23:39:06.146671Z",
+   "downloads_30d": 670755,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "logging",
+   "version": "0.4.9.6",
+   "last_upload": "2013-06-04T23:43:22.086208Z",
+   "downloads_30d": 634534,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "singleton-decorator",
+   "version": "1.0.0",
+   "last_upload": "2017-08-10T19:52:45.903156Z",
+   "downloads_30d": 633295,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "distance",
+   "version": "0.1.3",
+   "last_upload": "2013-11-21T00:14:34.152138Z",
+   "downloads_30d": 617643,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "gevent-websocket",
+   "version": "0.10.1",
+   "last_upload": "2017-03-12T22:46:05.680208Z",
+   "downloads_30d": 613913,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "sftpserver",
+   "version": "0.3",
+   "last_upload": "2017-04-09T22:51:43.800831Z",
+   "downloads_30d": 613681,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "ipaddr",
+   "version": "2.2.0",
+   "last_upload": "2017-09-15T20:08:39.692751Z",
+   "downloads_30d": 589866,
+   "status": "still_alive",
+   "py38_passed": 70,
+   "py313_passed": 70
+  },
+  {
+   "project": "win-unicode-console",
+   "version": "0.5",
+   "last_upload": "2016-06-25T19:48:54.050070Z",
+   "downloads_30d": 569778,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "names",
+   "version": "0.3.0",
+   "last_upload": "2013-05-14T14:55:49.073301Z",
+   "downloads_30d": 543333,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "ratelimiter",
+   "version": "1.2.0.post0",
+   "last_upload": "2017-12-12T00:33:38.783530Z",
+   "downloads_30d": 523863,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "base32-crockford",
+   "version": "0.3.0",
+   "last_upload": "2015-03-19T22:00:34.116003Z",
+   "downloads_30d": 519320,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "zmq",
+   "version": "0.0.0",
+   "last_upload": "2015-05-21T17:34:26.603945Z",
+   "downloads_30d": 515516,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "colorthief",
+   "version": "0.2.1",
+   "last_upload": "2017-02-09T07:13:19.041184Z",
+   "downloads_30d": 503945,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "ptable",
+   "version": "0.9.2",
+   "last_upload": "2015-05-28T07:06:53.622513Z",
+   "downloads_30d": 500852,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "untokenize",
+   "version": "0.1.1",
+   "last_upload": "2014-02-08T16:30:40.631383Z",
+   "downloads_30d": 497304,
+   "status": "still_alive",
+   "py38_passed": 6,
+   "py313_passed": 6
+  },
+  {
+   "project": "gcloud",
+   "version": "0.18.3",
+   "last_upload": "2016-09-23T16:39:31.124469Z",
+   "downloads_30d": 496358,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "webrtcvad",
+   "version": "2.0.10",
+   "last_upload": "2017-01-07T23:05:18.732212Z",
+   "downloads_30d": 496011,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "twofish",
+   "version": "0.3.0",
+   "last_upload": "2013-11-15T20:37:59.634284Z",
+   "downloads_30d": 488413,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "nvidia-ml-py3",
+   "version": "7.352.0",
+   "last_upload": "2017-06-03T07:43:46.299229Z",
+   "downloads_30d": 484393,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pydotplus",
+   "version": "2.0.2",
+   "last_upload": "2014-12-09T00:53:49.515063Z",
+   "downloads_30d": 477182,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pytest-cover",
+   "version": "3.0.0",
+   "last_upload": "2015-08-01T19:20:22.562432Z",
+   "downloads_30d": 470750,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "flask-script",
+   "version": "2.0.6",
+   "last_upload": "2017-09-06T11:24:31.707797Z",
+   "downloads_30d": 468922,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "clipboard",
+   "version": "0.0.4",
+   "last_upload": "2014-05-22T12:49:08.683348Z",
+   "downloads_30d": 462984,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "flask-basicauth",
+   "version": "0.2.0",
+   "last_upload": "2013-06-15T14:19:12.812327Z",
+   "downloads_30d": 460899,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pip-hello-world",
+   "version": "0.1",
+   "last_upload": "2017-03-23T15:34:33.829964Z",
+   "downloads_30d": 460774,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "jieba3k",
+   "version": "0.35.1",
+   "last_upload": "2014-11-15T05:47:47.978365Z",
+   "downloads_30d": 459677,
+   "status": "not_alive_on_38",
+   "py38_passed": 1,
+   "py313_passed": null
+  },
+  {
+   "project": "compoundfiles",
+   "version": "0.3",
+   "last_upload": "2014-09-01T18:08:47.872177Z",
+   "downloads_30d": 456472,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "verboselogs",
+   "version": "1.7",
+   "last_upload": "2017-08-07T19:46:16.674766Z",
+   "downloads_30d": 452938,
+   "status": "still_alive",
+   "py38_passed": 5,
+   "py313_passed": 5
+  },
+  {
+   "project": "pylint-celery",
+   "version": "0.3",
+   "last_upload": "2014-09-25T07:23:50.824895Z",
+   "downloads_30d": 452781,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "feedfinder2",
+   "version": "0.0.4",
+   "last_upload": "2016-01-25T15:09:17.492229Z",
+   "downloads_30d": 451439,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pytest-coverage",
+   "version": "0.0.1",
+   "last_upload": "2015-06-17T22:08:36.771766Z",
+   "downloads_30d": 450030,
+   "status": "no_sdist",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "delta",
+   "version": "0.4.2",
+   "last_upload": "2016-08-06T05:02:44.181067Z",
+   "downloads_30d": 448964,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pydrive",
+   "version": "1.3.1",
+   "last_upload": "2016-10-24T20:48:39.976841Z",
+   "downloads_30d": 444609,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "jamo",
+   "version": "0.4.1",
+   "last_upload": "2017-11-06T19:28:51.729200Z",
+   "downloads_30d": 442570,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "descartes",
+   "version": "1.1.0",
+   "last_upload": "2017-01-17T15:37:03.945069Z",
+   "downloads_30d": 442029,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "certvalidator",
+   "version": "0.11.1",
+   "last_upload": "2016-07-29T14:57:44.754876Z",
+   "downloads_30d": 438648,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "django-bulk-update",
+   "version": "2.2.0",
+   "last_upload": "2017-08-12T07:46:53.680496Z",
+   "downloads_30d": 438557,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pyric",
+   "version": "0.1.6.3",
+   "last_upload": "2016-12-04T07:54:48.374144Z",
+   "downloads_30d": 433644,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "oauth2",
+   "version": "1.9.0.post1",
+   "last_upload": "2015-09-12T12:47:02.670445Z",
+   "downloads_30d": 431649,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "docx",
+   "version": "0.2.4",
+   "last_upload": "2014-02-06T10:02:49.394083Z",
+   "downloads_30d": 430059,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "apted",
+   "version": "1.0.3",
+   "last_upload": "2017-11-08T13:03:23.294550Z",
+   "downloads_30d": 420619,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "s2sphere",
+   "version": "0.2.5",
+   "last_upload": "2017-11-16T17:47:48.139212Z",
+   "downloads_30d": 415597,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "reverse-geocoder",
+   "version": "1.5.1",
+   "last_upload": "2016-09-15T16:46:46.277734Z",
+   "downloads_30d": 415046,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "setuptools-git",
+   "version": "1.2",
+   "last_upload": "2017-02-18T00:31:15.411835Z",
+   "downloads_30d": 400573,
+   "status": "still_alive",
+   "py38_passed": 22,
+   "py313_passed": 22
+  },
+  {
+   "project": "bz2file",
+   "version": "0.98",
+   "last_upload": "2014-01-19T21:37:38.793407Z",
+   "downloads_30d": 397417,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "backports-abc",
+   "version": "0.5",
+   "last_upload": "2016-11-12T16:05:34.577002Z",
+   "downloads_30d": 397348,
+   "status": "still_alive",
+   "py38_passed": 5,
+   "py313_passed": 5
+  },
+  {
+   "project": "backports-shutil-get-terminal-size",
+   "version": "1.0.0",
+   "last_upload": "2014-08-19T18:42:51.908309Z",
+   "downloads_30d": 388495,
+   "status": "not_alive_on_38",
+   "py38_passed": 2,
+   "py313_passed": null
+  },
+  {
+   "project": "functools32",
+   "version": "3.2.3-2",
+   "last_upload": "2015-07-11T02:47:05.917894Z",
+   "downloads_30d": 387278,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "qualname",
+   "version": "0.1.0",
+   "last_upload": "2015-04-11T22:51:43.936914Z",
+   "downloads_30d": 382108,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "colormath",
+   "version": "3.0.0",
+   "last_upload": "2017-12-27T20:15:11.537358Z",
+   "downloads_30d": 359481,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pytest-logging",
+   "version": "2015.11.4",
+   "last_upload": "2015-11-04T12:15:54.122959Z",
+   "downloads_30d": 358218,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "common",
+   "version": "0.1.2",
+   "last_upload": "2016-05-19T14:38:59.454463Z",
+   "downloads_30d": 356813,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "python-etcd",
+   "version": "0.4.5",
+   "last_upload": "2017-03-02T23:05:36.016866Z",
+   "downloads_30d": 353833,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "flask-principal",
+   "version": "0.4.0",
+   "last_upload": "2013-06-14T18:56:14.264578Z",
+   "downloads_30d": 350928,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pytest-pep8",
+   "version": "1.0.6",
+   "last_upload": "2014-04-27T06:21:28.945626Z",
+   "downloads_30d": 349867,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "isoweek",
+   "version": "1.3.3",
+   "last_upload": "2017-01-04T15:16:33.969782Z",
+   "downloads_30d": 341995,
+   "status": "still_alive",
+   "py38_passed": 7,
+   "py313_passed": 7
+  },
+  {
+   "project": "phpserialize",
+   "version": "1.3",
+   "last_upload": "2012-01-22T12:48:05.828255Z",
+   "downloads_30d": 337513,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "imblearn",
+   "version": "0.0",
+   "last_upload": "2017-01-19T11:52:37.416042Z",
+   "downloads_30d": 335672,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pyspark-pandas",
+   "version": "0.0.7",
+   "last_upload": "2014-10-14T18:09:32.104848Z",
+   "downloads_30d": 333506,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "importlib",
+   "version": "1.0.4",
+   "last_upload": "2016-08-31T19:40:00.728096Z",
+   "downloads_30d": 323961,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "xmlrunner",
+   "version": "1.7.7",
+   "last_upload": "2014-11-10T16:18:12.624458Z",
+   "downloads_30d": 319257,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "hurry-filesize",
+   "version": "0.9",
+   "last_upload": "2009-03-11T23:15:40.615466Z",
+   "downloads_30d": 306964,
+   "status": "not_alive_on_38",
+   "py38_passed": 1,
+   "py313_passed": null
+  },
+  {
+   "project": "varint",
+   "version": "1.0.2",
+   "last_upload": "2016-02-24T20:42:38.500689Z",
+   "downloads_30d": 306255,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "python-speech-features",
+   "version": "0.6",
+   "last_upload": "2017-08-16T01:46:13.644854Z",
+   "downloads_30d": 304841,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "clint",
+   "version": "0.5.1",
+   "last_upload": "2015-08-25T16:11:19.237015Z",
+   "downloads_30d": 302989,
+   "status": "still_alive",
+   "py38_passed": 6,
+   "py313_passed": 6
+  },
+  {
+   "project": "args",
+   "version": "0.1.0",
+   "last_upload": "2012-05-08T07:41:57.541571Z",
+   "downloads_30d": 302896,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "logger",
+   "version": "1.4",
+   "last_upload": "2013-10-22T16:49:01.480292Z",
+   "downloads_30d": 301784,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "wsgiref",
+   "version": "0.1.2",
+   "last_upload": "2006-06-12T03:55:59Z",
+   "downloads_30d": 299874,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pathtools",
+   "version": "0.1.2",
+   "last_upload": "2011-08-25T11:39:31.178130Z",
+   "downloads_30d": 299740,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "secure-smtplib",
+   "version": "0.1.1",
+   "last_upload": "2015-04-07T14:44:45.188890Z",
+   "downloads_30d": 292983,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "python-gflags",
+   "version": "3.1.2",
+   "last_upload": "2017-10-27T13:04:08.546650Z",
+   "downloads_30d": 290585,
+   "status": "still_alive",
+   "py38_passed": 16,
+   "py313_passed": 16
+  },
+  {
+   "project": "sdnotify",
+   "version": "0.3.2",
+   "last_upload": "2017-08-02T20:03:44.395986Z",
+   "downloads_30d": 289492,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "openapi-codec",
+   "version": "1.3.2",
+   "last_upload": "2017-07-19T11:27:35.772648Z",
+   "downloads_30d": 287787,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "email-to",
+   "version": "0.1.0",
+   "last_upload": "2017-10-01T22:08:09.293280Z",
+   "downloads_30d": 287761,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "fernet",
+   "version": "1.0.1",
+   "last_upload": "2016-09-18T15:02:22.712330Z",
+   "downloads_30d": 281190,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "redis-sentinel-url",
+   "version": "1.0.1",
+   "last_upload": "2017-04-05T07:47:55.456116Z",
+   "downloads_30d": 275876,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "graphlib",
+   "version": "0.9.5",
+   "last_upload": "2014-06-12T18:11:33.608455Z",
+   "downloads_30d": 273690,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "cdp",
+   "version": "0.0.2",
+   "last_upload": "2015-07-19T10:50:02.149516Z",
+   "downloads_30d": 271131,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "google-oauth",
+   "version": "1.0.1",
+   "last_upload": "2016-03-28T21:01:26.163015Z",
+   "downloads_30d": 270990,
+   "status": "no_sdist",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "ordereddict",
+   "version": "1.1",
+   "last_upload": "2010-10-28T10:08:17.831012Z",
+   "downloads_30d": 269750,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "click-configfile",
+   "version": "0.2.3",
+   "last_upload": "2017-09-24T13:03:34.731803Z",
+   "downloads_30d": 263318,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pyclamd",
+   "version": "0.4.0",
+   "last_upload": "2017-08-27T22:06:08.515578Z",
+   "downloads_30d": 254892,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "overpunch",
+   "version": "1.1",
+   "last_upload": "2017-04-24T13:07:54.461348Z",
+   "downloads_30d": 254044,
+   "status": "still_alive",
+   "py38_passed": 15,
+   "py313_passed": 15
+  },
+  {
+   "project": "jose",
+   "version": "1.0.0",
+   "last_upload": "2015-11-13T10:52:21.506256Z",
+   "downloads_30d": 253698,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "uptime",
+   "version": "3.0.1",
+   "last_upload": "2013-10-07T14:19:58.456291Z",
+   "downloads_30d": 252051,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pypydispatcher",
+   "version": "2.1.2",
+   "last_upload": "2017-07-03T14:20:51.806796Z",
+   "downloads_30d": 249318,
+   "status": "still_alive",
+   "py38_passed": 20,
+   "py313_passed": 20
+  },
+  {
+   "project": "overloading",
+   "version": "0.5.0",
+   "last_upload": "2016-04-15T22:13:19.740287Z",
+   "downloads_30d": 247249,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pyrtf3",
+   "version": "0.47.5",
+   "last_upload": "2017-05-19T00:52:01.430086Z",
+   "downloads_30d": 247064,
+   "status": "still_alive",
+   "py38_passed": 28,
+   "py313_passed": 28
+  },
+  {
+   "project": "tailer",
+   "version": "0.4.1",
+   "last_upload": "2015-12-09T19:44:11.428574Z",
+   "downloads_30d": 244810,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pyformance",
+   "version": "0.4",
+   "last_upload": "2017-10-08T12:16:13.873131Z",
+   "downloads_30d": 239513,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "kafka",
+   "version": "1.3.5",
+   "last_upload": "2017-10-07T23:53:16.826418Z",
+   "downloads_30d": 239184,
+   "status": "ghost",
+   "py38_passed": 41,
+   "py313_passed": 0
+  },
+  {
+   "project": "python-librsync",
+   "version": "0.1-5",
+   "last_upload": "2013-06-04T05:54:35.290339Z",
+   "downloads_30d": 238764,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "envparse",
+   "version": "0.2.0",
+   "last_upload": "2015-12-19T17:24:03.234167Z",
+   "downloads_30d": 237746,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "statistics",
+   "version": "1.0.3.5",
+   "last_upload": "2017-10-10T07:49:37.101872Z",
+   "downloads_30d": 231958,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pytest-json",
+   "version": "0.4.0",
+   "last_upload": "2016-01-18T06:33:27.713814Z",
+   "downloads_30d": 225052,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "jinja2-pluralize",
+   "version": "0.3.0",
+   "last_upload": "2015-10-09T07:29:03.413472Z",
+   "downloads_30d": 224607,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "webapp2",
+   "version": "2.5.2",
+   "last_upload": "2016-09-13T17:15:18.201809Z",
+   "downloads_30d": 220965,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "django-crontab",
+   "version": "0.7.1",
+   "last_upload": "2016-03-07T19:35:54.714528Z",
+   "downloads_30d": 220939,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "jws",
+   "version": "0.1.3",
+   "last_upload": "2015-03-10T15:53:58.342679Z",
+   "downloads_30d": 220094,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pyuca",
+   "version": "1.2",
+   "last_upload": "2017-09-25T23:12:15.670853Z",
+   "downloads_30d": 218927,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "lorem",
+   "version": "0.1.1",
+   "last_upload": "2016-06-18T21:15:54.335586Z",
+   "downloads_30d": 218539,
+   "status": "not_alive_on_38",
+   "py38_passed": 2,
+   "py313_passed": null
+  },
+  {
+   "project": "rst2ansi",
+   "version": "0.1.5",
+   "last_upload": "2016-05-24T16:43:27.677541Z",
+   "downloads_30d": 217547,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "times",
+   "version": "0.7",
+   "last_upload": "2014-08-24T06:13:25.293843Z",
+   "downloads_30d": 212424,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pyreadline",
+   "version": "2.1",
+   "last_upload": "2015-09-16T08:27:51.793056Z",
+   "downloads_30d": 212071,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "slugify",
+   "version": "0.0.1",
+   "last_upload": "2010-12-07T16:36:05.530747Z",
+   "downloads_30d": 212053,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "ruamel-base",
+   "version": "1.0.0",
+   "last_upload": "2015-08-27T17:22:13.538419Z",
+   "downloads_30d": 211840,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pydes",
+   "version": "2.0.1",
+   "last_upload": "2016-05-06T22:37:27.590836Z",
+   "downloads_30d": 207311,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "extras",
+   "version": "1.0.0",
+   "last_upload": "2016-05-18T09:18:31.400476Z",
+   "downloads_30d": 205910,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "str2bool",
+   "version": "1.1",
+   "last_upload": "2017-12-25T12:30:05.048407Z",
+   "downloads_30d": 205080,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "robotframework-selenium2library",
+   "version": "3.0.0",
+   "last_upload": "2017-12-04T20:18:04.965125Z",
+   "downloads_30d": 204478,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "tempdir",
+   "version": "0.7.1",
+   "last_upload": "2016-03-02T16:42:22.066970Z",
+   "downloads_30d": 203398,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "progressbar33",
+   "version": "2.4",
+   "last_upload": "2014-08-29T08:55:24.366130Z",
+   "downloads_30d": 201581,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "htmlparser",
+   "version": "0.0.2",
+   "last_upload": "2013-03-01T16:02:49.146864Z",
+   "downloads_30d": 199693,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "hammock",
+   "version": "0.2.4",
+   "last_upload": "2013-04-21T21:48:19.907207Z",
+   "downloads_30d": 195522,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "artifactory",
+   "version": "0.1.17",
+   "last_upload": "2016-03-12T17:36:33.761197Z",
+   "downloads_30d": 194384,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "ezodf",
+   "version": "0.3.2",
+   "last_upload": "2015-12-14T06:48:55.187272Z",
+   "downloads_30d": 191155,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "rabbitmq-admin",
+   "version": "0.2",
+   "last_upload": "2015-10-16T20:30:29.436640Z",
+   "downloads_30d": 189355,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "luhn",
+   "version": "0.2.0",
+   "last_upload": "2015-06-23T07:08:35.749681Z",
+   "downloads_30d": 189326,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pipfile",
+   "version": "0.0.2",
+   "last_upload": "2017-03-11T03:27:44.308744Z",
+   "downloads_30d": 187969,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "django-dotenv",
+   "version": "1.4.2",
+   "last_upload": "2017-12-11T16:44:36.177691Z",
+   "downloads_30d": 187095,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "nanotime",
+   "version": "0.5.2",
+   "last_upload": "2011-09-22T14:30:20.915759Z",
+   "downloads_30d": 186765,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "cookies",
+   "version": "2.2.1",
+   "last_upload": "2014-09-27T02:36:49.417765Z",
+   "downloads_30d": 182317,
+   "status": "ghost",
+   "py38_passed": 66,
+   "py313_passed": 0
+  },
+  {
+   "project": "pynliner",
+   "version": "0.8.0",
+   "last_upload": "2017-01-10T19:37:00.066924Z",
+   "downloads_30d": 181236,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "initools",
+   "version": "0.3.1",
+   "last_upload": "2010-03-31T23:15:03.208882Z",
+   "downloads_30d": 178815,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pyudorandom",
+   "version": "1.0.0",
+   "last_upload": "2016-07-18T16:18:56.037647Z",
+   "downloads_30d": 175384,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "djangorestframework-recursive",
+   "version": "0.1.2",
+   "last_upload": "2017-07-04T07:49:24.206403Z",
+   "downloads_30d": 175201,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "awsiot",
+   "version": "0.1.3",
+   "last_upload": "2017-12-10T23:00:41.122380Z",
+   "downloads_30d": 171016,
+   "status": "no_sdist",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "standardjson",
+   "version": "0.3.1",
+   "last_upload": "2014-05-21T17:20:30.187201Z",
+   "downloads_30d": 169309,
+   "status": "still_alive",
+   "py38_passed": 13,
+   "py313_passed": 13
+  },
+  {
+   "project": "pyhs2",
+   "version": "0.6.0",
+   "last_upload": "2014-11-20T05:21:50.379821Z",
+   "downloads_30d": 169287,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "cssmin",
+   "version": "0.2.0",
+   "last_upload": "2013-10-14T15:40:29.854436Z",
+   "downloads_30d": 167427,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "mysql-connector-python-rf",
+   "version": "2.2.2",
+   "last_upload": "2017-02-04T02:12:42.135655Z",
+   "downloads_30d": 164595,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "slackweb",
+   "version": "1.0.5",
+   "last_upload": "2015-06-23T01:10:52.118933Z",
+   "downloads_30d": 162950,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "ignore",
+   "version": "0.1.4",
+   "last_upload": "2011-11-29T20:05:52.275202Z",
+   "downloads_30d": 161956,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "hyper",
+   "version": "0.7.0",
+   "last_upload": "2016-09-27T12:58:46.210102Z",
+   "downloads_30d": 160797,
+   "status": "still_alive",
+   "py38_passed": 4,
+   "py313_passed": 4
+  },
+  {
+   "project": "libmagic",
+   "version": "1.0",
+   "last_upload": "2012-03-02T17:56:36.681327Z",
+   "downloads_30d": 159538,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "django-ranged-response",
+   "version": "0.2.0",
+   "last_upload": "2017-07-18T09:20:27.603937Z",
+   "downloads_30d": 155162,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "threadloop",
+   "version": "1.0.2",
+   "last_upload": "2016-04-01T18:15:05.386802Z",
+   "downloads_30d": 152705,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "dawg-python",
+   "version": "0.7.2",
+   "last_upload": "2015-04-18T17:00:08.938162Z",
+   "downloads_30d": 151539,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "flake8-mutable",
+   "version": "1.2.0",
+   "last_upload": "2017-04-24T02:53:00.860129Z",
+   "downloads_30d": 148710,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "mysql-python",
+   "version": "1.2.5",
+   "last_upload": "2014-01-02T19:43:08.251341Z",
+   "downloads_30d": 148149,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "environ",
+   "version": "1.0",
+   "last_upload": "2007-08-06T01:56:08Z",
+   "downloads_30d": 146431,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pytest-faker",
+   "version": "2.0.0",
+   "last_upload": "2016-12-19T10:22:19.188500Z",
+   "downloads_30d": 144913,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "zipstream",
+   "version": "1.1.4",
+   "last_upload": "2016-05-06T13:05:50.560842Z",
+   "downloads_30d": 143751,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "morphys",
+   "version": "1.0",
+   "last_upload": "2017-01-10T20:08:56.872735Z",
+   "downloads_30d": 140072,
+   "status": "no_sdist",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "python-openid",
+   "version": "2.2.5",
+   "last_upload": "2010-07-01T19:20:20.940161Z",
+   "downloads_30d": 139150,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pbkdf2",
+   "version": "1.3",
+   "last_upload": "2011-06-14T05:18:10.981277Z",
+   "downloads_30d": 138005,
+   "status": "not_alive_on_38",
+   "py38_passed": 2,
+   "py313_passed": null
+  },
+  {
+   "project": "snaptime",
+   "version": "0.2.4",
+   "last_upload": "2017-06-15T15:22:04.067690Z",
+   "downloads_30d": 137699,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "subprocess-run",
+   "version": "0.0.8",
+   "last_upload": "2013-11-16T14:32:41.239477Z",
+   "downloads_30d": 137687,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "python-status",
+   "version": "1.0.1",
+   "last_upload": "2015-10-17T13:50:12.411007Z",
+   "downloads_30d": 137002,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "filechunkio",
+   "version": "1.8",
+   "last_upload": "2016-06-19T12:56:16.453482Z",
+   "downloads_30d": 135543,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "hypothesis-fspaths",
+   "version": "0.1",
+   "last_upload": "2017-07-29T12:19:41.415553Z",
+   "downloads_30d": 130899,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "http-client",
+   "version": "0.1.22",
+   "last_upload": "2017-08-28T09:50:08.550243Z",
+   "downloads_30d": 130556,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "srp-ext",
+   "version": "1.0.7.1",
+   "last_upload": "2017-07-17T09:18:39.339013Z",
+   "downloads_30d": 130188,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "redlock-py",
+   "version": "1.0.8",
+   "last_upload": "2016-03-08T16:15:23.359178Z",
+   "downloads_30d": 129053,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "phaxio",
+   "version": "0.3",
+   "last_upload": "2017-09-07T05:10:58.058602Z",
+   "downloads_30d": 128767,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "coverage-enable-subprocess",
+   "version": "1.0",
+   "last_upload": "2016-05-11T18:49:48.048901Z",
+   "downloads_30d": 128129,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "qrcode-terminal",
+   "version": "0.8",
+   "last_upload": "2017-12-05T03:52:10.236570Z",
+   "downloads_30d": 126560,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "speaklater",
+   "version": "1.3",
+   "last_upload": "2012-07-01T18:01:30.306401Z",
+   "downloads_30d": 125205,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "hashring",
+   "version": "1.5.1",
+   "last_upload": "2015-04-14T14:37:59.024189Z",
+   "downloads_30d": 123594,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "euclid3",
+   "version": "0.01",
+   "last_upload": "2014-05-14T10:51:19.907819Z",
+   "downloads_30d": 123123,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "cloudshell-core",
+   "version": "2.2.180",
+   "last_upload": "2017-08-09T15:03:17.730495Z",
+   "downloads_30d": 122288,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "jason",
+   "version": "0.1.7",
+   "last_upload": "2014-06-25T12:06:25.383095Z",
+   "downloads_30d": 122211,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pandas-access",
+   "version": "0.0.1",
+   "last_upload": "2016-06-07T21:02:38.242462Z",
+   "downloads_30d": 120789,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "scrapydo",
+   "version": "0.2.2",
+   "last_upload": "2017-02-24T03:16:42.964057Z",
+   "downloads_30d": 119101,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "xlocal",
+   "version": "0.5",
+   "last_upload": "2012-11-16T13:43:34.659425Z",
+   "downloads_30d": 118686,
+   "status": "still_alive",
+   "py38_passed": 3,
+   "py313_passed": 3
+  },
+  {
+   "project": "cloudshell-pdu-raritan",
+   "version": "1.0.55",
+   "last_upload": "2016-10-06T13:14:56.178419Z",
+   "downloads_30d": 118610,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "cloudshell-pdu-core",
+   "version": "1.0.21",
+   "last_upload": "2016-10-09T12:07:41.944341Z",
+   "downloads_30d": 118546,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "geonames",
+   "version": "0.1.3",
+   "last_upload": "2015-07-29T14:10:25.956657Z",
+   "downloads_30d": 117436,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "unipath",
+   "version": "1.1",
+   "last_upload": "2015-02-11T04:36:15.424748Z",
+   "downloads_30d": 116804,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "getname",
+   "version": "0.1.1",
+   "last_upload": "2015-08-23T02:12:48.377131Z",
+   "downloads_30d": 116189,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "graphitesend",
+   "version": "0.10.0",
+   "last_upload": "2017-03-25T17:53:58.168826Z",
+   "downloads_30d": 115958,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "multiprocessing",
+   "version": "2.6.2.1",
+   "last_upload": "2009-07-30T15:43:15.614998Z",
+   "downloads_30d": 115596,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pure-pcapy3",
+   "version": "1.0.1",
+   "last_upload": "2017-02-27T00:27:00.473547Z",
+   "downloads_30d": 115054,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "base36",
+   "version": "0.1.1",
+   "last_upload": "2014-12-07T10:20:50.808159Z",
+   "downloads_30d": 114291,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "anyjson",
+   "version": "0.3.3",
+   "last_upload": "2012-06-22T01:12:14.929294Z",
+   "downloads_30d": 114015,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "workdays",
+   "version": "1.4",
+   "last_upload": "2014-08-26T17:32:20.362168Z",
+   "downloads_30d": 113357,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "notify2",
+   "version": "0.3.1",
+   "last_upload": "2017-04-28T14:03:44.487146Z",
+   "downloads_30d": 113274,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "face-recognition-models",
+   "version": "0.3.0",
+   "last_upload": "2017-09-28T22:53:52.516925Z",
+   "downloads_30d": 112894,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "hkdf",
+   "version": "0.0.3",
+   "last_upload": "2015-06-16T03:55:40.044215Z",
+   "downloads_30d": 112461,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "browsermob-proxy",
+   "version": "0.8.0",
+   "last_upload": "2017-02-07T13:12:11.812736Z",
+   "downloads_30d": 111140,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "websocket",
+   "version": "0.2.1",
+   "last_upload": "2010-12-03T11:51:30.867364Z",
+   "downloads_30d": 110798,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pyxb",
+   "version": "1.2.6",
+   "last_upload": "2017-09-03T12:51:26.539151Z",
+   "downloads_30d": 110732,
+   "status": "ghost",
+   "py38_passed": 736,
+   "py313_passed": 10
+  },
+  {
+   "project": "statsd-tags",
+   "version": "3.2.1.post1",
+   "last_upload": "2016-12-24T06:27:03.205718Z",
+   "downloads_30d": 110709,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "backports-ssl",
+   "version": "0.0.9",
+   "last_upload": "2015-12-09T22:20:16.854552Z",
+   "downloads_30d": 108659,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "kappa",
+   "version": "0.7.0",
+   "last_upload": "2017-02-13T23:29:25.747201Z",
+   "downloads_30d": 108458,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "django-compat",
+   "version": "1.0.15",
+   "last_upload": "2017-12-04T09:14:25.537105Z",
+   "downloads_30d": 108095,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "urllib3-mock",
+   "version": "0.3.3",
+   "last_upload": "2015-04-16T23:10:38.540994Z",
+   "downloads_30d": 107983,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pysingleton",
+   "version": "0.2.1",
+   "last_upload": "2017-04-04T07:38:30.659412Z",
+   "downloads_30d": 107522,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "python-magic-bin",
+   "version": "0.4.14",
+   "last_upload": "2017-10-02T16:30:18.545739Z",
+   "downloads_30d": 107119,
+   "status": "no_sdist",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "dj-static",
+   "version": "0.0.6",
+   "last_upload": "2014-07-11T17:14:41.094889Z",
+   "downloads_30d": 106480,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "tesseract",
+   "version": "0.1.3",
+   "last_upload": "2015-07-13T21:21:24.512781Z",
+   "downloads_30d": 105133,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "static3",
+   "version": "0.7.0",
+   "last_upload": "2016-05-10T11:43:45.170146Z",
+   "downloads_30d": 104398,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "cppheaderparser",
+   "version": "2.7.4",
+   "last_upload": "2016-11-22T01:21:47.955828Z",
+   "downloads_30d": 104348,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "logutils",
+   "version": "0.3.5",
+   "last_upload": "2017-06-24T19:54:54.214532Z",
+   "downloads_30d": 104273,
+   "status": "ghost",
+   "py38_passed": 31,
+   "py313_passed": 16
+  },
+  {
+   "project": "webfinger",
+   "version": "1.0",
+   "last_upload": "2013-11-02T21:28:52.726653Z",
+   "downloads_30d": 104211,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "cmreshandler",
+   "version": "1.0.0",
+   "last_upload": "2017-10-08T21:11:39.448260Z",
+   "downloads_30d": 103864,
+   "status": "no_sdist",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "quantile-python",
+   "version": "1.1",
+   "last_upload": "2015-02-11T20:21:24.489747Z",
+   "downloads_30d": 103251,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pysha3",
+   "version": "1.0.2",
+   "last_upload": "2017-07-18T12:50:13.470631Z",
+   "downloads_30d": 102562,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "ulid",
+   "version": "1.1",
+   "last_upload": "2016-08-01T23:00:12.792192Z",
+   "downloads_30d": 102395,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "django-test-without-migrations",
+   "version": "0.6",
+   "last_upload": "2017-04-12T22:03:19.832733Z",
+   "downloads_30d": 102223,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "hello-world",
+   "version": "0.2",
+   "last_upload": "2013-12-24T14:44:49.500771Z",
+   "downloads_30d": 102117,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "djangorestframework-jwt",
+   "version": "1.11.0",
+   "last_upload": "2017-06-23T23:47:54.361381Z",
+   "downloads_30d": 102022,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "haikunator",
+   "version": "2.1.0",
+   "last_upload": "2016-09-20T17:36:00.843095Z",
+   "downloads_30d": 101882,
+   "status": "still_alive",
+   "py38_passed": 5,
+   "py313_passed": 5
+  },
+  {
+   "project": "paver",
+   "version": "1.3.4",
+   "last_upload": "2017-12-31T01:13:43.758279Z",
+   "downloads_30d": 100855,
+   "status": "ghost",
+   "py38_passed": 99,
+   "py313_passed": 39
+  },
+  {
+   "project": "fuzzy",
+   "version": "1.2.2",
+   "last_upload": "2017-10-16T22:09:04.302636Z",
+   "downloads_30d": 100251,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "redis-dump-load",
+   "version": "1.1",
+   "last_upload": "2016-09-10T02:12:18.683289Z",
+   "downloads_30d": 99609,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "slumber",
+   "version": "0.7.1",
+   "last_upload": "2015-05-14T15:54:01.421339Z",
+   "downloads_30d": 98390,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "slack",
+   "version": "0.0.3",
+   "last_upload": "2014-03-26T14:38:04.012562Z",
+   "downloads_30d": 97811,
+   "status": "no_sdist",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pysphere",
+   "version": "0.1.8",
+   "last_upload": "2012-10-02T12:57:07.528968Z",
+   "downloads_30d": 97782,
+   "status": "no_sdist",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "json2table",
+   "version": "1.1.5",
+   "last_upload": "2016-10-21T22:36:39.377259Z",
+   "downloads_30d": 96333,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "fake-factory",
+   "version": "9999.9.9",
+   "last_upload": "2016-12-16T16:17:41.950717Z",
+   "downloads_30d": 95255,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "python-hmac-auth",
+   "version": "0.4",
+   "last_upload": "2014-08-22T21:14:29.895418Z",
+   "downloads_30d": 94867,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pyscrypt",
+   "version": "1.6.2",
+   "last_upload": "2015-02-03T21:44:52.793635Z",
+   "downloads_30d": 94724,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "djangorestframework-bulk",
+   "version": "0.2.1",
+   "last_upload": "2015-04-26T22:51:40.219304Z",
+   "downloads_30d": 94474,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "mailer",
+   "version": "0.8.1",
+   "last_upload": "2015-04-22T03:10:28.641436Z",
+   "downloads_30d": 94420,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "django-rest-framework",
+   "version": "0.1.0",
+   "last_upload": "2017-07-20T17:14:33.345188Z",
+   "downloads_30d": 94030,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "cfenv",
+   "version": "0.5.3",
+   "last_upload": "2017-06-09T04:43:37.517088Z",
+   "downloads_30d": 93482,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "cov-core",
+   "version": "1.15.0",
+   "last_upload": "2014-11-22T11:05:18.033263Z",
+   "downloads_30d": 93411,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "rest-condition",
+   "version": "1.0.3",
+   "last_upload": "2016-11-01T15:15:50.951741Z",
+   "downloads_30d": 93121,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pickle-mixin",
+   "version": "1.0.2",
+   "last_upload": "2017-04-09T22:30:44.369133Z",
+   "downloads_30d": 91839,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pygrok",
+   "version": "1.0.0",
+   "last_upload": "2016-09-24T08:32:38.164199Z",
+   "downloads_30d": 90365,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "olefileio-pl",
+   "version": "0.42.1",
+   "last_upload": "2015-01-25T21:21:46.014123Z",
+   "downloads_30d": 89417,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "glog",
+   "version": "0.3.1",
+   "last_upload": "2016-12-14T01:52:18.216465Z",
+   "downloads_30d": 89395,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "django-fake-model",
+   "version": "0.1.4",
+   "last_upload": "2016-02-08T11:41:12.846204Z",
+   "downloads_30d": 88675,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "causalmodels",
+   "version": "0.4.0",
+   "last_upload": "2016-07-20T00:19:45.106987Z",
+   "downloads_30d": 88658,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "django-naomi",
+   "version": "0.8",
+   "last_upload": "2015-08-15T17:04:50.223897Z",
+   "downloads_30d": 87959,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "ksuid",
+   "version": "1.3",
+   "last_upload": "2017-06-12T05:32:40.703625Z",
+   "downloads_30d": 87665,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "code128",
+   "version": "0.3",
+   "last_upload": "2015-01-18T21:38:31.165529Z",
+   "downloads_30d": 86951,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "webui",
+   "version": "0.1.7",
+   "last_upload": "2013-09-25T22:36:20.347030Z",
+   "downloads_30d": 85807,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "proto-google-cloud-datastore-v1",
+   "version": "0.90.4",
+   "last_upload": "2017-04-28T21:22:56.871983Z",
+   "downloads_30d": 85526,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "hanziconv",
+   "version": "0.3.2",
+   "last_upload": "2016-09-01T05:41:15.254528Z",
+   "downloads_30d": 85345,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "siphash",
+   "version": "0.0.1",
+   "last_upload": "2013-01-22T14:15:02.919341Z",
+   "downloads_30d": 82993,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "storage",
+   "version": "0.0.4.3",
+   "last_upload": "2016-07-19T23:29:02.356047Z",
+   "downloads_30d": 82874,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "sqlalchemy-postgres-copy",
+   "version": "0.5.0",
+   "last_upload": "2017-04-07T04:03:48.235066Z",
+   "downloads_30d": 82759,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "python-bitcoinrpc",
+   "version": "1.0",
+   "last_upload": "2016-08-24T05:14:20.993627Z",
+   "downloads_30d": 82566,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "uwsgidecorators",
+   "version": "1.1.0",
+   "last_upload": "2014-11-05T13:56:29.251205Z",
+   "downloads_30d": 82498,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "python3-ldap",
+   "version": "0.9.8.4",
+   "last_upload": "2015-05-28T04:37:58.699630Z",
+   "downloads_30d": 82404,
+   "status": "ghost",
+   "py38_passed": 36,
+   "py313_passed": 15
+  },
+  {
+   "project": "pyexcel-ezodf",
+   "version": "0.3.4",
+   "last_upload": "2017-10-23T17:29:33.750170Z",
+   "downloads_30d": 82248,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pydbus",
+   "version": "0.6.0",
+   "last_upload": "2016-12-18T16:44:31.904494Z",
+   "downloads_30d": 82170,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "parse-accept-language",
+   "version": "0.1.2",
+   "last_upload": "2017-09-04T14:56:29.922049Z",
+   "downloads_30d": 82080,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "wkhtmltopdf",
+   "version": "0.2",
+   "last_upload": "2011-07-21T13:05:56.771481Z",
+   "downloads_30d": 81849,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "configparser2",
+   "version": "4.0.0",
+   "last_upload": "2015-05-12T20:29:56.341993Z",
+   "downloads_30d": 81598,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "django-settings-export",
+   "version": "1.2.1",
+   "last_upload": "2016-11-06T11:18:58.000503Z",
+   "downloads_30d": 81427,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pycalverter",
+   "version": "1.6.1",
+   "last_upload": "2011-06-11T07:33:42.266574Z",
+   "downloads_30d": 81377,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pypeg2",
+   "version": "2.15.2",
+   "last_upload": "2015-10-07T19:27:49.747784Z",
+   "downloads_30d": 80717,
+   "status": "still_alive",
+   "py38_passed": 50,
+   "py313_passed": 50
+  },
+  {
+   "project": "guacamole",
+   "version": "0.9.2",
+   "last_upload": "2015-08-06T17:31:25.089045Z",
+   "downloads_30d": 79687,
+   "status": "still_alive",
+   "py38_passed": 4,
+   "py313_passed": 4
+  },
+  {
+   "project": "memoized-property",
+   "version": "1.0.3",
+   "last_upload": "2016-09-29T06:16:34.770963Z",
+   "downloads_30d": 79410,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "libpci",
+   "version": "0.2",
+   "last_upload": "2015-04-24T11:11:35.291362Z",
+   "downloads_30d": 79321,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "prompt",
+   "version": "0.4.1",
+   "last_upload": "2017-06-05T17:01:13.381869Z",
+   "downloads_30d": 79275,
+   "status": "still_alive",
+   "py38_passed": 14,
+   "py313_passed": 14
+  },
+  {
+   "project": "atomos",
+   "version": "0.3.1",
+   "last_upload": "2015-07-05T16:13:50.070222Z",
+   "downloads_30d": 78954,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "django-request-id",
+   "version": "1.0.0",
+   "last_upload": "2016-10-23T15:28:01.379004Z",
+   "downloads_30d": 78918,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "null",
+   "version": "0.6.1",
+   "last_upload": "2013-03-05T10:48:19.799795Z",
+   "downloads_30d": 78899,
+   "status": "ghost",
+   "py38_passed": 6,
+   "py313_passed": 0
+  },
+  {
+   "project": "python-envcfg",
+   "version": "0.2.0",
+   "last_upload": "2016-07-07T09:15:07.672402Z",
+   "downloads_30d": 78870,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "polyglot",
+   "version": "16.7.4",
+   "last_upload": "2016-07-03T20:05:42.197691Z",
+   "downloads_30d": 78404,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "grpc-google-pubsub-v1",
+   "version": "0.11.1",
+   "last_upload": "2016-09-30T01:13:40.877770Z",
+   "downloads_30d": 77443,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "jsonable",
+   "version": "0.3.1",
+   "last_upload": "2015-10-01T14:45:04.942580Z",
+   "downloads_30d": 77348,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pyrabbit",
+   "version": "1.1.0",
+   "last_upload": "2014-08-28T03:51:45.137738Z",
+   "downloads_30d": 76658,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "arff",
+   "version": "0.9",
+   "last_upload": "2012-05-11T14:43:33.816835Z",
+   "downloads_30d": 76376,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "faker-e164",
+   "version": "0.1.0",
+   "last_upload": "2017-07-31T08:37:55.472790Z",
+   "downloads_30d": 76340,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "dumbyaml",
+   "version": "0.9.3",
+   "last_upload": "2015-11-20T17:11:09.039334Z",
+   "downloads_30d": 75821,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "bash",
+   "version": "0.6",
+   "last_upload": "2016-05-30T19:56:39.711269Z",
+   "downloads_30d": 75088,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "redlock",
+   "version": "1.2.0",
+   "last_upload": "2015-12-21T12:01:48.737018Z",
+   "downloads_30d": 74604,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "properscoring",
+   "version": "0.1",
+   "last_upload": "2015-11-12T19:54:29.615748Z",
+   "downloads_30d": 74579,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "update",
+   "version": "0.0.1",
+   "last_upload": "2017-11-13T21:12:53.479019Z",
+   "downloads_30d": 74269,
+   "status": "no_sdist",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "stemming",
+   "version": "1.0.1",
+   "last_upload": "2010-12-20T18:07:35.734299Z",
+   "downloads_30d": 74189,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "status",
+   "version": "0.2.5",
+   "last_upload": "2015-01-07T01:48:09.340525Z",
+   "downloads_30d": 73853,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "monthdelta",
+   "version": "0.9.1",
+   "last_upload": "2012-08-07T05:18:41.791016Z",
+   "downloads_30d": 73783,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pysmbclient",
+   "version": "0.1.5",
+   "last_upload": "2017-03-03T00:37:57.738695Z",
+   "downloads_30d": 71779,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pysnowflake",
+   "version": "0.1.3",
+   "last_upload": "2014-11-20T08:07:41.356427Z",
+   "downloads_30d": 70926,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "durations",
+   "version": "0.3.3",
+   "last_upload": "2014-01-10T09:40:18.041468Z",
+   "downloads_30d": 70568,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "julian",
+   "version": "0.14",
+   "last_upload": "2016-03-26T19:02:06.470802Z",
+   "downloads_30d": 70399,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "bottle-websocket",
+   "version": "0.2.9",
+   "last_upload": "2015-09-21T05:34:24.871273Z",
+   "downloads_30d": 70073,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "django-statsd-mozilla",
+   "version": "0.4.0",
+   "last_upload": "2017-09-01T11:25:18.214707Z",
+   "downloads_30d": 69969,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "rdp",
+   "version": "0.8",
+   "last_upload": "2016-12-19T01:34:07.454686Z",
+   "downloads_30d": 69520,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "brewer2mpl",
+   "version": "1.4.1",
+   "last_upload": "2014-09-19T04:00:03.926935Z",
+   "downloads_30d": 69394,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pyflux",
+   "version": "0.4.15",
+   "last_upload": "2017-06-16T09:44:56.157938Z",
+   "downloads_30d": 69392,
+   "status": "native_code",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "azureml",
+   "version": "0.2.7",
+   "last_upload": "2016-03-14T21:08:15.277991Z",
+   "downloads_30d": 68350,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "contexttimer",
+   "version": "0.3.3",
+   "last_upload": "2016-09-02T09:58:32.610353Z",
+   "downloads_30d": 67375,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "collective-checkdocs",
+   "version": "0.2",
+   "last_upload": "2014-06-06T10:05:03.747421Z",
+   "downloads_30d": 67373,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "tinynumpy",
+   "version": "1.2.1",
+   "last_upload": "2016-01-12T04:12:16.312759Z",
+   "downloads_30d": 67161,
+   "status": "still_alive",
+   "py38_passed": 49,
+   "py313_passed": 49
+  },
+  {
+   "project": "onetimepass",
+   "version": "1.0.1",
+   "last_upload": "2015-07-31T03:05:02.216942Z",
+   "downloads_30d": 66925,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "multiline-log-formatter",
+   "version": "0.1.8",
+   "last_upload": "2016-01-15T09:01:30.967661Z",
+   "downloads_30d": 66922,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "stups-tokens",
+   "version": "1.1.19",
+   "last_upload": "2017-01-04T17:23:57.247263Z",
+   "downloads_30d": 66911,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pkcs7",
+   "version": "0.1.2",
+   "last_upload": "2017-03-23T08:38:45.034938Z",
+   "downloads_30d": 66536,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "packbits",
+   "version": "0.6",
+   "last_upload": "2013-04-06T08:22:59.650221Z",
+   "downloads_30d": 66505,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "infi-pyutils",
+   "version": "1.1.3",
+   "last_upload": "2016-09-14T10:55:50.482570Z",
+   "downloads_30d": 66286,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "flake8-junit-report",
+   "version": "2.1.0",
+   "last_upload": "2016-05-11T18:20:15.832052Z",
+   "downloads_30d": 66096,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "ggplot",
+   "version": "0.11.5",
+   "last_upload": "2016-09-29T16:57:03.147596Z",
+   "downloads_30d": 65528,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "yolk3k",
+   "version": "0.9",
+   "last_upload": "2016-06-19T00:59:51.787000Z",
+   "downloads_30d": 65497,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "tzcron",
+   "version": "1.0.0",
+   "last_upload": "2016-09-25T22:38:51.737232Z",
+   "downloads_30d": 65040,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "mpyq",
+   "version": "0.2.5",
+   "last_upload": "2014-03-17T02:25:41.540556Z",
+   "downloads_30d": 64902,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "tabula",
+   "version": "1.0.5",
+   "last_upload": "2012-11-01T20:50:21.685921Z",
+   "downloads_30d": 64802,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "teradata",
+   "version": "15.10.0.21",
+   "last_upload": "2017-04-29T22:12:29.523533Z",
+   "downloads_30d": 64644,
+   "status": "still_alive",
+   "py38_passed": 18,
+   "py313_passed": 18
+  },
+  {
+   "project": "split",
+   "version": "0.4",
+   "last_upload": "2016-01-20T11:24:50.692896Z",
+   "downloads_30d": 64554,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "iso-639",
+   "version": "0.4.5",
+   "last_upload": "2016-04-29T14:57:29.657544Z",
+   "downloads_30d": 64363,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "sk-video",
+   "version": "1.1.10",
+   "last_upload": "2017-12-12T00:49:40.404181Z",
+   "downloads_30d": 64308,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "shortid",
+   "version": "0.1.2",
+   "last_upload": "2017-03-27T22:32:11.046377Z",
+   "downloads_30d": 64281,
+   "status": "still_alive",
+   "py38_passed": 3,
+   "py313_passed": 3
+  },
+  {
+   "project": "weakrefmethod",
+   "version": "1.0.3",
+   "last_upload": "2016-07-18T19:57:07.158786Z",
+   "downloads_30d": 63913,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "filemagic",
+   "version": "1.6",
+   "last_upload": "2013-05-29T11:52:55.652980Z",
+   "downloads_30d": 63487,
+   "status": "still_alive",
+   "py38_passed": 6,
+   "py313_passed": 6
+  },
+  {
+   "project": "serpy",
+   "version": "0.3.1",
+   "last_upload": "2017-11-28T05:23:03.757759Z",
+   "downloads_30d": 62986,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "xmldict",
+   "version": "0.4.1",
+   "last_upload": "2013-04-10T10:32:33.934662Z",
+   "downloads_30d": 62541,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "awesome-slugify",
+   "version": "1.6.5",
+   "last_upload": "2015-06-05T06:31:13.651640Z",
+   "downloads_30d": 61991,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "robotbackgroundlogger",
+   "version": "1.2",
+   "last_upload": "2017-01-19T11:11:46.782674Z",
+   "downloads_30d": 61802,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "soundex",
+   "version": "1.1.3",
+   "last_upload": "2014-06-01T14:14:54.914272Z",
+   "downloads_30d": 61547,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "silpa-common",
+   "version": "0.3",
+   "last_upload": "2014-05-03T04:09:04.051332Z",
+   "downloads_30d": 61282,
+   "status": "still_alive",
+   "py38_passed": 4,
+   "py313_passed": 4
+  },
+  {
+   "project": "stubs",
+   "version": "1.0.0",
+   "last_upload": "2016-10-31T22:15:37.884479Z",
+   "downloads_30d": 61096,
+   "status": "no_sdist",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "south",
+   "version": "1.0.2",
+   "last_upload": "2014-12-23T09:56:17.853324Z",
+   "downloads_30d": 60708,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "django-inline-svg",
+   "version": "0.1.1",
+   "last_upload": "2016-10-29T13:11:11.973822Z",
+   "downloads_30d": 60488,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "talon",
+   "version": "1.4.4",
+   "last_upload": "2017-08-24T23:04:14.082427Z",
+   "downloads_30d": 60455,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "path-and-address",
+   "version": "2.0.1",
+   "last_upload": "2016-07-21T02:56:09.794588Z",
+   "downloads_30d": 60299,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "commonregex",
+   "version": "1.5.4",
+   "last_upload": "2014-08-29T22:18:11.868083Z",
+   "downloads_30d": 60133,
+   "status": "no_sdist",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "flask-sslify",
+   "version": "0.1.5",
+   "last_upload": "2015-04-02T20:25:24.407301Z",
+   "downloads_30d": 60102,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "django-ptree",
+   "version": "0.2.151",
+   "last_upload": "2014-08-10T09:44:40.023685Z",
+   "downloads_30d": 60081,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "email",
+   "version": "4.0.2",
+   "last_upload": "2011-07-19T19:57:12.125256Z",
+   "downloads_30d": 60028,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "runipy",
+   "version": "0.1.5",
+   "last_upload": "2015-10-19T04:33:55.114147Z",
+   "downloads_30d": 59307,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "async",
+   "version": "0.6.2",
+   "last_upload": "2014-11-12T17:03:40.353310Z",
+   "downloads_30d": 59190,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "httplib2shim",
+   "version": "0.0.3",
+   "last_upload": "2017-06-26T16:33:15.761342Z",
+   "downloads_30d": 58921,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pyramid-chameleon",
+   "version": "0.3",
+   "last_upload": "2014-07-01T17:47:38.302340Z",
+   "downloads_30d": 58654,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pgpdump",
+   "version": "1.5",
+   "last_upload": "2014-01-27T16:15:31.603873Z",
+   "downloads_30d": 58602,
+   "status": "still_alive",
+   "py38_passed": 28,
+   "py313_passed": 28
+  },
+  {
+   "project": "pyexcel-webio",
+   "version": "0.1.4",
+   "last_upload": "2017-10-23T20:50:03.944968Z",
+   "downloads_30d": 58343,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "optional-django",
+   "version": "0.3.0",
+   "last_upload": "2015-05-04T10:28:00.455839Z",
+   "downloads_30d": 58185,
+   "status": "still_alive",
+   "py38_passed": 5,
+   "py313_passed": 5
+  },
+  {
+   "project": "tinys3",
+   "version": "0.1.12",
+   "last_upload": "2016-10-14T10:07:14.473760Z",
+   "downloads_30d": 57192,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "py-geohex3",
+   "version": "1.0.0",
+   "last_upload": "2017-04-17T03:06:08.386782Z",
+   "downloads_30d": 57001,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "django-request-mock",
+   "version": "0.1.4",
+   "last_upload": "2014-03-08T13:32:04.306353Z",
+   "downloads_30d": 56967,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "nosexcover",
+   "version": "1.0.11",
+   "last_upload": "2016-10-30T12:42:24.981973Z",
+   "downloads_30d": 56938,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "pytidylib",
+   "version": "0.3.2",
+   "last_upload": "2016-11-16T01:53:00.990126Z",
+   "downloads_30d": 56514,
+   "status": "not_alive_on_38",
+   "py38_passed": 1,
+   "py313_passed": null
+  },
+  {
+   "project": "money",
+   "version": "1.3.0",
+   "last_upload": "2016-04-17T13:48:46.010605Z",
+   "downloads_30d": 56238,
+   "status": "ghost",
+   "py38_passed": 20,
+   "py313_passed": 0
+  },
+  {
+   "project": "fbpca",
+   "version": "1.0",
+   "last_upload": "2014-12-09T21:25:41.604214Z",
+   "downloads_30d": 55900,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "blob",
+   "version": "0.16",
+   "last_upload": "2015-10-24T08:49:45.880555Z",
+   "downloads_30d": 55668,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "ipynb",
+   "version": "0.5.1",
+   "last_upload": "2017-10-23T06:25:54.199179Z",
+   "downloads_30d": 55647,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "django-xforwardedfor-middleware",
+   "version": "2.0",
+   "last_upload": "2017-07-23T21:33:24.436554Z",
+   "downloads_30d": 55604,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "termstyle",
+   "version": "0.1.11",
+   "last_upload": "2016-08-31T09:02:12.896035Z",
+   "downloads_30d": 55584,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "mockredispy",
+   "version": "2.9.3",
+   "last_upload": "2016-04-18T23:24:18.669990Z",
+   "downloads_30d": 55261,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "logentries",
+   "version": "0.17",
+   "last_upload": "2016-05-16T10:37:25.497664Z",
+   "downloads_30d": 55185,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pinyin",
+   "version": "0.4.0",
+   "last_upload": "2016-11-24T03:35:02.653611Z",
+   "downloads_30d": 55169,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "gapic-google-cloud-pubsub-v1",
+   "version": "0.15.4",
+   "last_upload": "2017-04-14T17:47:55.250508Z",
+   "downloads_30d": 55080,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "pylink",
+   "version": "0.3.3",
+   "last_upload": "2017-11-29T08:54:12.331798Z",
+   "downloads_30d": 54599,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  },
+  {
+   "project": "django-jquery-js",
+   "version": "3.1.1",
+   "last_upload": "2016-12-31T01:02:03.798717Z",
+   "downloads_30d": 54458,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "djangorestframework-version-transforms",
+   "version": "0.5.0",
+   "last_upload": "2015-11-02T03:04:01.639226Z",
+   "downloads_30d": 54389,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "protol",
+   "version": "0.0.3",
+   "last_upload": "2017-12-15T05:38:16.791128Z",
+   "downloads_30d": 53861,
+   "status": "no_tests",
+   "py38_passed": null,
+   "py313_passed": null
+  },
+  {
+   "project": "fields",
+   "version": "5.0.0",
+   "last_upload": "2016-04-13T20:53:08.282722Z",
+   "downloads_30d": 53415,
+   "status": "not_alive_on_38",
+   "py38_passed": 0,
+   "py313_passed": null
+  }
+ ]
+}

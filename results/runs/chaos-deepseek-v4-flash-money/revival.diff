@@ -1,0 +1,30 @@
+diff -ruN -x __pycache__ -x .pytest_cache a/money/src/money/money.py b/money/src/money/money.py
+--- a/money/src/money/money.py	2016-04-17 09:41:45.000000000 -0400
++++ b/money/src/money/money.py	2026-10-27 11:18:47.171294784 -0400
+@@ -3,7 +3,10 @@
+ """
+ import decimal
+ import re
+-from distutils.version import StrictVersion
++try:
++    from distutils.version import StrictVersion
++except ImportError:
++    from packaging.version import Version as StrictVersion
+ 
+ from .exchange import xrates
+ from .exceptions import (CurrencyMismatch, ExchangeRateNotFound,
+diff -ruN -x __pycache__ -x .pytest_cache a/money/src-py2/money/money.py b/money/src-py2/money/money.py
+--- a/money/src-py2/money/money.py	2016-04-17 09:41:45.000000000 -0400
++++ b/money/src-py2/money/money.py	2026-10-27 11:18:47.176294789 -0400
+@@ -4,7 +4,10 @@
+ """
+ import decimal
+ import re
+-from distutils.version import StrictVersion
++try:
++    from distutils.version import StrictVersion
++except ImportError:
++    from packaging.version import Version as StrictVersion
+ 
+ from .exchange import xrates
+ from .exceptions import (CurrencyMismatch, ExchangeRateNotFound,

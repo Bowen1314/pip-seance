@@ -1,0 +1,42 @@
+{
+ "project": "zipfile36",
+ "run": "bench-deepseek-v4-flash-zipfile36",
+ "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "status": "REVIVED",
+ "attempts": 1,
+ "seance": {
+  "run": "bench-deepseek-v4-flash-zipfile36",
+  "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+  "steps": 10,
+  "input_tokens": 60629,
+  "output_tokens": 4769,
+  "usd": 0.009823380000000001,
+  "stopped": "finished",
+  "last_test": {
+   "targets": 168,
+   "targets_passing": 168,
+   "all_passed": 168,
+   "collected": 169,
+   "timed_out": false,
+   "first_error": null,
+   "failing_targets": [],
+   "pytest_tail": "........................................................................ [ 42%]\n.....................s.................................................. [ 85%]\n.........................                                                [100%]\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n168 passed, 1 skipped in 10.51s\n"
+  }
+ },
+ "verdict": {
+  "py313": {
+   "targets": 168,
+   "passing": 168,
+   "missing": [],
+   "first_error": null
+  },
+  "py38": {
+   "targets": 168,
+   "passing": 168,
+   "missing": []
+  },
+  "protected_changed": [],
+  "diff_lines_changed": 27,
+  "files_changed": 1
+ }
+}

@@ -1,0 +1,4 @@
+2026-10-27T15:17:02Z worker A up (pid 36592)
+2026-10-27T15:17:11Z agent finished step 4; sending SIGKILL to worker A (pid 36592)
+2026-10-27T15:17:28Z worker B up (pid 37853)
+2026-10-27T15:18:55Z client returned

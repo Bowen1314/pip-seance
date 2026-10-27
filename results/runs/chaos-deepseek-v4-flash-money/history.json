@@ -1,0 +1,914 @@
+{
+ "events": [
+  {
+   "eventId": "1",
+   "eventTime": "2026-10-27T15:17:03.820494931Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_STARTED",
+   "taskId": "1048587",
+   "workflowExecutionStartedEventAttributes": {
+    "workflowType": {
+     "name": "seanceWorkflow"
+    },
+    "taskQueue": {
+     "name": "seance",
+     "kind": "TASK_QUEUE_KIND_NORMAL"
+    },
+    "input": {
+     "payloads": [
+      {
+       "metadata": {
+        "encoding": "anNvbi9wbGFpbg=="
+       },
+       "data": {
+        "project": "money",
+        "model": "deepseek-v4-flash",
+        "run": "chaos-deepseek-v4-flash-money"
+       },
+       "_decoded": "payload data base64-decoded for readability by seance tooling"
+      }
+     ]
+    },
+    "workflowTaskTimeout": "10s",
+    "originalExecutionRunId": "01a17def-b4cc-7785-96cd-2a6addc2ffad",
+    "identity": "37186@node",
+    "firstExecutionRunId": "01a17def-b4cc-7785-96cd-2a6addc2ffad",
+    "attempt": 1,
+    "firstWorkflowTaskBackoff": "0s",
+    "header": {},
+    "workflowId": "chaos-deepseek-v4-flash-money"
+   }
+  },
+  {
+   "eventId": "2",
+   "eventTime": "2026-10-27T15:17:03.820661785Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+   "taskId": "1048588",
+   "workflowTaskScheduledEventAttributes": {
+    "taskQueue": {
+     "name": "seance",
+     "kind": "TASK_QUEUE_KIND_NORMAL"
+    },
+    "startToCloseTimeout": "10s",
+    "attempt": 1
+   }
+  },
+  {
+   "eventId": "3",
+   "eventTime": "2026-10-27T15:17:03.861352392Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+   "taskId": "1048593",
+   "workflowTaskStartedEventAttributes": {
+    "scheduledEventId": "2",
+    "identity": "36592@node",
+    "requestId": "7308792a-fde3-47f1-8847-6a0bae9ccb50",
+    "historySizeBytes": "367",
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    }
+   }
+  },
+  {
+   "eventId": "4",
+   "eventTime": "2026-10-27T15:17:03.971282345Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+   "taskId": "1048597",
+   "workflowTaskCompletedEventAttributes": {
+    "scheduledEventId": "2",
+    "startedEventId": "3",
+    "identity": "36592@node",
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    },
+    "sdkMetadata": {
+     "coreUsedFlags": [
+      1,
+      3,
+      2
+     ],
+     "sdkName": "temporal-typescript",
+     "sdkVersion": "1.24.0"
+    },
+    "meteringMetadata": {}
+   }
+  },
+  {
+   "eventId": "5",
+   "eventTime": "2026-10-27T15:17:03.971596587Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+   "taskId": "1048598",
+   "activityTaskScheduledEventAttributes": {
+    "activityId": "1",
+    "activityType": {
+     "name": "prepare"
+    },
+    "taskQueue": {
+     "name": "seance",
+     "kind": "TASK_QUEUE_KIND_NORMAL"
+    },
+    "header": {},
+    "input": {
+     "payloads": [
+      {
+       "metadata": {
+        "encoding": "anNvbi9wbGFpbg=="
+       },
+       "data": {
+        "project": "money",
+        "run": "chaos-deepseek-v4-flash-money"
+       },
+       "_decoded": "payload data base64-decoded for readability by seance tooling"
+      }
+     ]
+    },
+    "scheduleToCloseTimeout": "0s",
+    "scheduleToStartTimeout": "0s",
+    "startToCloseTimeout": "900s",
+    "heartbeatTimeout": "0s",
+    "workflowTaskCompletedEventId": "4",
+    "retryPolicy": {
+     "initialInterval": "1s",
+     "backoffCoefficient": 2,
+     "maximumInterval": "100s",
+     "maximumAttempts": 3
+    },
+    "useWorkflowBuildId": true
+   }
+  },
+  {
+   "eventId": "6",
+   "eventTime": "2026-10-27T15:17:03.994291238Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+   "taskId": "1048605",
+   "activityTaskStartedEventAttributes": {
+    "scheduledEventId": "5",
+    "identity": "36592@node",
+    "requestId": "2f65fe9d-0f67-4d1d-8d17-2843a013cb48",
+    "attempt": 1,
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    }
+   }
+  },
+  {
+   "eventId": "7",
+   "eventTime": "2026-10-27T15:17:04.111066707Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+   "taskId": "1048606",
+   "activityTaskCompletedEventAttributes": {
+    "result": {
+     "payloads": [
+      {
+       "metadata": {
+        "encoding": "anNvbi9wbGFpbg=="
+       },
+       "data": {
+        "root": "<seance>/work/revive/chaos-deepseek-v4-flash-money",
+        "pristine": "<seance>/work/pristine/money",
+        "brief": "Package: money 1.3.0 (last upload to PyPI 2016-04-17, still downloaded 56,238 times in the last 30 days).\nOn Python 3.8, 20 tests passed. On Python 3.13, 20 of them fail or are not collected.\nFirst error on 3.13: ModuleNotFoundError: No module named 'distutils'\nEnd of pytest output on 3.13:\nnux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc-py2/money/__init__.py:6: in <module>\n    from .money import Money, XMoney\nsrc-py2/money/money.py:7: in <module>\n    from distutils.version import StrictVersion\nE   ModuleNotFoundError: No module named 'distutils'\n_____________ ERROR collecting src-py2/money/tests/test_xmoney.py ______________\nImportError while importing test module '<seance>/work/pristine/money/src-py2/money/tests/test_xmoney.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc-py2/money/__init__.py:6: in <module>\n    from .money import Money, XMoney\nsrc-py2/money/money.py:7: in <module>\n    from distutils.version import StrictVersion\nE   ModuleNotFoundError: No module named 'distutils'\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nERROR src/money/tests/test_docs.py\nERROR src/money/tests/test_exchange.py\nERROR src/money/tests/test_money.py\nERROR src/money/tests/test_xmoney.py\nERROR src-py2/money/tests/test_exchange.py\nERROR src-py2/money/tests/test_money.py\nERROR src-py2/money/tests/test_xmoney.py\n7 errors in 0.25s\n\nThe package source is your workspace root. Start with run_tests."
+       },
+       "_decoded": "payload data base64-decoded for readability by seance tooling"
+      }
+     ]
+    },
+    "scheduledEventId": "5",
+    "startedEventId": "6",
+    "identity": "36592@node"
+   }
+  },
+  {
+   "eventId": "8",
+   "eventTime": "2026-10-27T15:17:04.111240104Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+   "taskId": "1048607",
+   "workflowTaskScheduledEventAttributes": {
+    "taskQueue": {
+     "name": "36592@node-bef0563531604a428f712bdf55a959d0",
+     "kind": "TASK_QUEUE_KIND_STICKY",
+     "normalName": "seance"
+    },
+    "startToCloseTimeout": "10s",
+    "attempt": 1
+   }
+  },
+  {
+   "eventId": "9",
+   "eventTime": "2026-10-27T15:17:04.127571396Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+   "taskId": "1048611",
+   "workflowTaskStartedEventAttributes": {
+    "scheduledEventId": "8",
+    "identity": "36592@node",
+    "requestId": "8b234ca0-492e-4a48-b5d6-9134401d7cbe",
+    "historySizeBytes": "3367",
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    }
+   }
+  },
+  {
+   "eventId": "10",
+   "eventTime": "2026-10-27T15:17:04.160653931Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+   "taskId": "1048615",
+   "workflowTaskCompletedEventAttributes": {
+    "scheduledEventId": "8",
+    "startedEventId": "9",
+    "identity": "36592@node",
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    },
+    "sdkMetadata": {},
+    "meteringMetadata": {}
+   }
+  },
+  {
+   "eventId": "11",
+   "eventTime": "2026-10-27T15:17:04.160741877Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+   "taskId": "1048616",
+   "activityTaskScheduledEventAttributes": {
+    "activityId": "2",
+    "activityType": {
+     "name": "seance"
+    },
+    "taskQueue": {
+     "name": "seance",
+     "kind": "TASK_QUEUE_KIND_NORMAL"
+    },
+    "header": {},
+    "input": {
+     "payloads": [
+      {
+       "metadata": {
+        "encoding": "anNvbi9wbGFpbg=="
+       },
+       "data": {
+        "project": "money",
+        "run": "chaos-deepseek-v4-flash-money",
+        "model": "deepseek-v4-flash",
+        "root": "<seance>/work/revive/chaos-deepseek-v4-flash-money",
+        "brief": "Package: money 1.3.0 (last upload to PyPI 2016-04-17, still downloaded 56,238 times in the last 30 days).\nOn Python 3.8, 20 tests passed. On Python 3.13, 20 of them fail or are not collected.\nFirst error on 3.13: ModuleNotFoundError: No module named 'distutils'\nEnd of pytest output on 3.13:\nnux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc-py2/money/__init__.py:6: in <module>\n    from .money import Money, XMoney\nsrc-py2/money/money.py:7: in <module>\n    from distutils.version import StrictVersion\nE   ModuleNotFoundError: No module named 'distutils'\n_____________ ERROR collecting src-py2/money/tests/test_xmoney.py ______________\nImportError while importing test module '<seance>/work/pristine/money/src-py2/money/tests/test_xmoney.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc-py2/money/__init__.py:6: in <module>\n    from .money import Money, XMoney\nsrc-py2/money/money.py:7: in <module>\n    from distutils.version import StrictVersion\nE   ModuleNotFoundError: No module named 'distutils'\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nERROR src/money/tests/test_docs.py\nERROR src/money/tests/test_exchange.py\nERROR src/money/tests/test_money.py\nERROR src/money/tests/test_xmoney.py\nERROR src-py2/money/tests/test_exchange.py\nERROR src-py2/money/tests/test_money.py\nERROR src-py2/money/tests/test_xmoney.py\n7 errors in 0.25s\n\nThe package source is your workspace root. Start with run_tests."
+       },
+       "_decoded": "payload data base64-decoded for readability by seance tooling"
+      }
+     ]
+    },
+    "scheduleToCloseTimeout": "0s",
+    "scheduleToStartTimeout": "0s",
+    "startToCloseTimeout": "2400s",
+    "heartbeatTimeout": "90s",
+    "workflowTaskCompletedEventId": "10",
+    "retryPolicy": {
+     "initialInterval": "5s",
+     "backoffCoefficient": 2,
+     "maximumInterval": "500s",
+     "maximumAttempts": 3
+    },
+    "useWorkflowBuildId": true
+   }
+  },
+  {
+   "eventId": "12",
+   "eventTime": "2026-10-27T15:18:40.723382316Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+   "taskId": "1048630",
+   "activityTaskStartedEventAttributes": {
+    "scheduledEventId": "11",
+    "identity": "37853@node",
+    "requestId": "7a6e5a61-27ca-4ab2-b381-7f7afd4723f6",
+    "attempt": 2,
+    "lastFailure": {
+     "message": "activity Heartbeat timeout",
+     "source": "Server",
+     "timeoutFailureInfo": {
+      "timeoutType": "TIMEOUT_TYPE_HEARTBEAT"
+     }
+    },
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    }
+   }
+  },
+  {
+   "eventId": "13",
+   "eventTime": "2026-10-27T15:18:53.064462568Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+   "taskId": "1048631",
+   "activityTaskCompletedEventAttributes": {
+    "result": {
+     "payloads": [
+      {
+       "metadata": {
+        "encoding": "anNvbi9wbGFpbg=="
+       },
+       "data": {
+        "run": "chaos-deepseek-v4-flash-money",
+        "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+        "steps": 8,
+        "input_tokens": 41592,
+        "output_tokens": 1145,
+        "usd": 0.006143480000000001,
+        "stopped": "finished",
+        "final_text": "All 20 target tests pass on Python 3.13.\n\nCAUSE OF DEATH: Python 3.13 removed the `distutils` module, so `from distutils.version import StrictVersion` raised `ModuleNotFoundError` at import time, breaking collection of every test module.\n\nREMEDY: In both `src/money/money.py` and `src-py2/money/money.py`, wrapped the `distutils.version.StrictVersion` import in a try/except that falls back to `packaging.version.Version` when `distutils` is unavailable (keeping Python 3.8 compatibility).",
+        "last_test": {
+         "targets": 20,
+         "targets_passing": 20,
+         "all_passed": 20,
+         "collected": 25,
+         "timed_out": false,
+         "first_error": "ModuleNotFoundError: No module named 'babel'",
+         "failing_targets": [],
+         "pytest_tail": "e[level:], package, level)\nsrc/money/tests/test_xmoney.py:9: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n____________ ERROR collecting src-py2/money/tests/test_exchange.py _____________\nimport file mismatch:\nimported module 'money.tests.test_exchange' has this __file__ attribute:\n  <seance>/work/revive/chaos-deepseek-v4-flash-money/src/money/tests/test_exchange.py\nwhich is not the same as the test file we want to collect:\n  <seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_exchange.py\nHINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules\n______________ ERROR collecting src-py2/money/tests/test_money.py ______________\nImportError while importing test module '<seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_money.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc/money/tests/test_money.py:7: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n_____________ ERROR collecting src-py2/money/tests/test_xmoney.py ______________\nImportError while importing test module '<seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_xmoney.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc/money/tests/test_xmoney.py:9: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nERROR src/money/tests/test_money.py\nERROR src/money/tests/test_xmoney.py\nERROR src-py2/money/tests/test_exchange.py\nERROR src-py2/money/tests/test_money.py\nERROR src-py2/money/tests/test_xmoney.py\n20 passed, 5 errors in 0.32s\n"
+        }
+       },
+       "_decoded": "payload data base64-decoded for readability by seance tooling"
+      }
+     ]
+    },
+    "scheduledEventId": "11",
+    "startedEventId": "12",
+    "identity": "37853@node"
+   }
+  },
+  {
+   "eventId": "14",
+   "eventTime": "2026-10-27T15:18:53.064490511Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+   "taskId": "1048632",
+   "workflowTaskScheduledEventAttributes": {
+    "taskQueue": {
+     "name": "36592@node-bef0563531604a428f712bdf55a959d0",
+     "kind": "TASK_QUEUE_KIND_STICKY",
+     "normalName": "seance"
+    },
+    "startToCloseTimeout": "10s",
+    "attempt": 1
+   }
+  },
+  {
+   "eventId": "15",
+   "eventTime": "2026-10-27T15:18:53.102424067Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+   "taskId": "1048636",
+   "workflowTaskStartedEventAttributes": {
+    "scheduledEventId": "14",
+    "identity": "37853@node",
+    "requestId": "62d1d0e9-9d3b-4262-8c1f-006ab410faef",
+    "historySizeBytes": "9773",
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    }
+   }
+  },
+  {
+   "eventId": "16",
+   "eventTime": "2026-10-27T15:18:53.287373679Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+   "taskId": "1048640",
+   "workflowTaskCompletedEventAttributes": {
+    "scheduledEventId": "14",
+    "startedEventId": "15",
+    "identity": "37853@node",
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    },
+    "sdkMetadata": {},
+    "meteringMetadata": {}
+   }
+  },
+  {
+   "eventId": "17",
+   "eventTime": "2026-10-27T15:18:53.287461515Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+   "taskId": "1048641",
+   "activityTaskScheduledEventAttributes": {
+    "activityId": "3",
+    "activityType": {
+     "name": "verify"
+    },
+    "taskQueue": {
+     "name": "seance",
+     "kind": "TASK_QUEUE_KIND_NORMAL"
+    },
+    "header": {},
+    "input": {
+     "payloads": [
+      {
+       "metadata": {
+        "encoding": "anNvbi9wbGFpbg=="
+       },
+       "data": {
+        "project": "money",
+        "run": "chaos-deepseek-v4-flash-money",
+        "root": "<seance>/work/revive/chaos-deepseek-v4-flash-money",
+        "pristine": "<seance>/work/pristine/money"
+       },
+       "_decoded": "payload data base64-decoded for readability by seance tooling"
+      }
+     ]
+    },
+    "scheduleToCloseTimeout": "0s",
+    "scheduleToStartTimeout": "0s",
+    "startToCloseTimeout": "900s",
+    "heartbeatTimeout": "0s",
+    "workflowTaskCompletedEventId": "16",
+    "retryPolicy": {
+     "initialInterval": "1s",
+     "backoffCoefficient": 2,
+     "maximumInterval": "100s",
+     "maximumAttempts": 3
+    },
+    "useWorkflowBuildId": true
+   }
+  },
+  {
+   "eventId": "18",
+   "eventTime": "2026-10-27T15:18:53.316984699Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+   "taskId": "1048647",
+   "activityTaskStartedEventAttributes": {
+    "scheduledEventId": "17",
+    "identity": "37853@node",
+    "requestId": "591333ce-13c8-4d58-861f-d5752c6192de",
+    "attempt": 1,
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    }
+   }
+  },
+  {
+   "eventId": "19",
+   "eventTime": "2026-10-27T15:18:54.989545241Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+   "taskId": "1048648",
+   "activityTaskCompletedEventAttributes": {
+    "result": {
+     "payloads": [
+      {
+       "metadata": {
+        "encoding": "anNvbi9wbGFpbg=="
+       },
+       "data": {
+        "py313": {
+         "targets": 20,
+         "passing": 20,
+         "missing": [],
+         "first_error": "ModuleNotFoundError: No module named 'babel'"
+        },
+        "py38": {
+         "targets": 20,
+         "passing": 20,
+         "missing": []
+        },
+        "protected_changed": [],
+        "diff_lines_changed": 10,
+        "files_changed": 2
+       },
+       "_decoded": "payload data base64-decoded for readability by seance tooling"
+      }
+     ]
+    },
+    "scheduledEventId": "17",
+    "startedEventId": "18",
+    "identity": "37853@node"
+   }
+  },
+  {
+   "eventId": "20",
+   "eventTime": "2026-10-27T15:18:54.989582441Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+   "taskId": "1048649",
+   "workflowTaskScheduledEventAttributes": {
+    "taskQueue": {
+     "name": "37853@node-aa46be1cd26c4f1eac4ec3c6f4a95fb6",
+     "kind": "TASK_QUEUE_KIND_STICKY",
+     "normalName": "seance"
+    },
+    "startToCloseTimeout": "10s",
+    "attempt": 1
+   }
+  },
+  {
+   "eventId": "21",
+   "eventTime": "2026-10-27T15:18:55.019641545Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+   "taskId": "1048653",
+   "workflowTaskStartedEventAttributes": {
+    "scheduledEventId": "20",
+    "identity": "37853@node",
+    "requestId": "0de71424-4d61-47a3-8ae6-54c62ba32c28",
+    "historySizeBytes": "11064",
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    }
+   }
+  },
+  {
+   "eventId": "22",
+   "eventTime": "2026-10-27T15:18:55.055699941Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+   "taskId": "1048657",
+   "workflowTaskCompletedEventAttributes": {
+    "scheduledEventId": "20",
+    "startedEventId": "21",
+    "identity": "37853@node",
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    },
+    "sdkMetadata": {},
+    "meteringMetadata": {}
+   }
+  },
+  {
+   "eventId": "23",
+   "eventTime": "2026-10-27T15:18:55.055771366Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+   "taskId": "1048658",
+   "activityTaskScheduledEventAttributes": {
+    "activityId": "4",
+    "activityType": {
+     "name": "countAttempts"
+    },
+    "taskQueue": {
+     "name": "seance",
+     "kind": "TASK_QUEUE_KIND_NORMAL"
+    },
+    "header": {},
+    "input": {
+     "payloads": [
+      {
+       "metadata": {
+        "encoding": "anNvbi9wbGFpbg=="
+       },
+       "data": {
+        "run": "chaos-deepseek-v4-flash-money"
+       },
+       "_decoded": "payload data base64-decoded for readability by seance tooling"
+      }
+     ]
+    },
+    "scheduleToCloseTimeout": "0s",
+    "scheduleToStartTimeout": "0s",
+    "startToCloseTimeout": "900s",
+    "heartbeatTimeout": "0s",
+    "workflowTaskCompletedEventId": "22",
+    "retryPolicy": {
+     "initialInterval": "1s",
+     "backoffCoefficient": 2,
+     "maximumInterval": "100s",
+     "maximumAttempts": 3
+    },
+    "useWorkflowBuildId": true
+   }
+  },
+  {
+   "eventId": "24",
+   "eventTime": "2026-10-27T15:18:55.083012535Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+   "taskId": "1048664",
+   "activityTaskStartedEventAttributes": {
+    "scheduledEventId": "23",
+    "identity": "37853@node",
+    "requestId": "757c3bd8-15e1-4365-9c0e-e16d4a14b826",
+    "attempt": 1,
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    }
+   }
+  },
+  {
+   "eventId": "25",
+   "eventTime": "2026-10-27T15:18:55.103215125Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+   "taskId": "1048665",
+   "activityTaskCompletedEventAttributes": {
+    "result": {
+     "payloads": [
+      {
+       "metadata": {
+        "encoding": "anNvbi9wbGFpbg=="
+       },
+       "data": 2,
+       "_decoded": "payload data base64-decoded for readability by seance tooling"
+      }
+     ]
+    },
+    "scheduledEventId": "23",
+    "startedEventId": "24",
+    "identity": "37853@node"
+   }
+  },
+  {
+   "eventId": "26",
+   "eventTime": "2026-10-27T15:18:55.103240993Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+   "taskId": "1048666",
+   "workflowTaskScheduledEventAttributes": {
+    "taskQueue": {
+     "name": "37853@node-aa46be1cd26c4f1eac4ec3c6f4a95fb6",
+     "kind": "TASK_QUEUE_KIND_STICKY",
+     "normalName": "seance"
+    },
+    "startToCloseTimeout": "10s",
+    "attempt": 1
+   }
+  },
+  {
+   "eventId": "27",
+   "eventTime": "2026-10-27T15:18:55.132575132Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+   "taskId": "1048670",
+   "workflowTaskStartedEventAttributes": {
+    "scheduledEventId": "26",
+    "identity": "37853@node",
+    "requestId": "059b4349-9570-41bd-946b-2e04754173ea",
+    "historySizeBytes": "11964",
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    }
+   }
+  },
+  {
+   "eventId": "28",
+   "eventTime": "2026-10-27T15:18:55.166469055Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+   "taskId": "1048674",
+   "workflowTaskCompletedEventAttributes": {
+    "scheduledEventId": "26",
+    "startedEventId": "27",
+    "identity": "37853@node",
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    },
+    "sdkMetadata": {},
+    "meteringMetadata": {}
+   }
+  },
+  {
+   "eventId": "29",
+   "eventTime": "2026-10-27T15:18:55.166556179Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+   "taskId": "1048675",
+   "activityTaskScheduledEventAttributes": {
+    "activityId": "5",
+    "activityType": {
+     "name": "epitaph"
+    },
+    "taskQueue": {
+     "name": "seance",
+     "kind": "TASK_QUEUE_KIND_NORMAL"
+    },
+    "header": {},
+    "input": {
+     "payloads": [
+      {
+       "metadata": {
+        "encoding": "anNvbi9wbGFpbg=="
+       },
+       "data": {
+        "project": "money",
+        "run": "chaos-deepseek-v4-flash-money",
+        "model": "deepseek-v4-flash",
+        "seance": {
+         "run": "chaos-deepseek-v4-flash-money",
+         "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+         "steps": 8,
+         "input_tokens": 41592,
+         "output_tokens": 1145,
+         "usd": 0.006143480000000001,
+         "stopped": "finished",
+         "final_text": "All 20 target tests pass on Python 3.13.\n\nCAUSE OF DEATH: Python 3.13 removed the `distutils` module, so `from distutils.version import StrictVersion` raised `ModuleNotFoundError` at import time, breaking collection of every test module.\n\nREMEDY: In both `src/money/money.py` and `src-py2/money/money.py`, wrapped the `distutils.version.StrictVersion` import in a try/except that falls back to `packaging.version.Version` when `distutils` is unavailable (keeping Python 3.8 compatibility).",
+         "last_test": {
+          "targets": 20,
+          "targets_passing": 20,
+          "all_passed": 20,
+          "collected": 25,
+          "timed_out": false,
+          "first_error": "ModuleNotFoundError: No module named 'babel'",
+          "failing_targets": [],
+          "pytest_tail": "e[level:], package, level)\nsrc/money/tests/test_xmoney.py:9: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n____________ ERROR collecting src-py2/money/tests/test_exchange.py _____________\nimport file mismatch:\nimported module 'money.tests.test_exchange' has this __file__ attribute:\n  <seance>/work/revive/chaos-deepseek-v4-flash-money/src/money/tests/test_exchange.py\nwhich is not the same as the test file we want to collect:\n  <seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_exchange.py\nHINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules\n______________ ERROR collecting src-py2/money/tests/test_money.py ______________\nImportError while importing test module '<seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_money.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc/money/tests/test_money.py:7: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n_____________ ERROR collecting src-py2/money/tests/test_xmoney.py ______________\nImportError while importing test module '<seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_xmoney.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc/money/tests/test_xmoney.py:9: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nERROR src/money/tests/test_money.py\nERROR src/money/tests/test_xmoney.py\nERROR src-py2/money/tests/test_exchange.py\nERROR src-py2/money/tests/test_money.py\nERROR src-py2/money/tests/test_xmoney.py\n20 passed, 5 errors in 0.32s\n"
+         }
+        },
+        "verdict": {
+         "py313": {
+          "targets": 20,
+          "passing": 20,
+          "missing": [],
+          "first_error": "ModuleNotFoundError: No module named 'babel'"
+         },
+         "py38": {
+          "targets": 20,
+          "passing": 20,
+          "missing": []
+         },
+         "protected_changed": [],
+         "diff_lines_changed": 10,
+         "files_changed": 2
+        },
+        "attempts": 2
+       },
+       "_decoded": "payload data base64-decoded for readability by seance tooling"
+      }
+     ]
+    },
+    "scheduleToCloseTimeout": "0s",
+    "scheduleToStartTimeout": "0s",
+    "startToCloseTimeout": "900s",
+    "heartbeatTimeout": "0s",
+    "workflowTaskCompletedEventId": "28",
+    "retryPolicy": {
+     "initialInterval": "1s",
+     "backoffCoefficient": 2,
+     "maximumInterval": "100s",
+     "maximumAttempts": 3
+    },
+    "useWorkflowBuildId": true
+   }
+  },
+  {
+   "eventId": "30",
+   "eventTime": "2026-10-27T15:18:55.196279150Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_STARTED",
+   "taskId": "1048681",
+   "activityTaskStartedEventAttributes": {
+    "scheduledEventId": "29",
+    "identity": "37853@node",
+    "requestId": "4f74c6d6-0029-436b-9d98-fda827de168a",
+    "attempt": 1,
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    }
+   }
+  },
+  {
+   "eventId": "31",
+   "eventTime": "2026-10-27T15:18:55.237544037Z",
+   "eventType": "EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+   "taskId": "1048682",
+   "activityTaskCompletedEventAttributes": {
+    "result": {
+     "payloads": [
+      {
+       "metadata": {
+        "encoding": "anNvbi9wbGFpbg=="
+       },
+       "data": {
+        "project": "money",
+        "run": "chaos-deepseek-v4-flash-money",
+        "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+        "status": "REVIVED",
+        "attempts": 2,
+        "seance": {
+         "run": "chaos-deepseek-v4-flash-money",
+         "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+         "steps": 8,
+         "input_tokens": 41592,
+         "output_tokens": 1145,
+         "usd": 0.006143480000000001,
+         "stopped": "finished",
+         "last_test": {
+          "targets": 20,
+          "targets_passing": 20,
+          "all_passed": 20,
+          "collected": 25,
+          "timed_out": false,
+          "first_error": "ModuleNotFoundError: No module named 'babel'",
+          "failing_targets": [],
+          "pytest_tail": "e[level:], package, level)\nsrc/money/tests/test_xmoney.py:9: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n____________ ERROR collecting src-py2/money/tests/test_exchange.py _____________\nimport file mismatch:\nimported module 'money.tests.test_exchange' has this __file__ attribute:\n  <seance>/work/revive/chaos-deepseek-v4-flash-money/src/money/tests/test_exchange.py\nwhich is not the same as the test file we want to collect:\n  <seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_exchange.py\nHINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules\n______________ ERROR collecting src-py2/money/tests/test_money.py ______________\nImportError while importing test module '<seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_money.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc/money/tests/test_money.py:7: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n_____________ ERROR collecting src-py2/money/tests/test_xmoney.py ______________\nImportError while importing test module '<seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_xmoney.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc/money/tests/test_xmoney.py:9: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nERROR src/money/tests/test_money.py\nERROR src/money/tests/test_xmoney.py\nERROR src-py2/money/tests/test_exchange.py\nERROR src-py2/money/tests/test_money.py\nERROR src-py2/money/tests/test_xmoney.py\n20 passed, 5 errors in 0.32s\n"
+         }
+        },
+        "verdict": {
+         "py313": {
+          "targets": 20,
+          "passing": 20,
+          "missing": [],
+          "first_error": "ModuleNotFoundError: No module named 'babel'"
+         },
+         "py38": {
+          "targets": 20,
+          "passing": 20,
+          "missing": []
+         },
+         "protected_changed": [],
+         "diff_lines_changed": 10,
+         "files_changed": 2
+        }
+       },
+       "_decoded": "payload data base64-decoded for readability by seance tooling"
+      }
+     ]
+    },
+    "scheduledEventId": "29",
+    "startedEventId": "30",
+    "identity": "37853@node"
+   }
+  },
+  {
+   "eventId": "32",
+   "eventTime": "2026-10-27T15:18:55.237570046Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+   "taskId": "1048683",
+   "workflowTaskScheduledEventAttributes": {
+    "taskQueue": {
+     "name": "37853@node-aa46be1cd26c4f1eac4ec3c6f4a95fb6",
+     "kind": "TASK_QUEUE_KIND_STICKY",
+     "normalName": "seance"
+    },
+    "startToCloseTimeout": "10s",
+    "attempt": 1
+   }
+  },
+  {
+   "eventId": "33",
+   "eventTime": "2026-10-27T15:18:55.268618071Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_STARTED",
+   "taskId": "1048687",
+   "workflowTaskStartedEventAttributes": {
+    "scheduledEventId": "32",
+    "identity": "37853@node",
+    "requestId": "cd0ba365-9c7f-4a59-94a0-c6951df5a442",
+    "historySizeBytes": "19903",
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    }
+   }
+  },
+  {
+   "eventId": "34",
+   "eventTime": "2026-10-27T15:18:55.306570474Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+   "taskId": "1048691",
+   "workflowTaskCompletedEventAttributes": {
+    "scheduledEventId": "32",
+    "startedEventId": "33",
+    "identity": "37853@node",
+    "workerVersion": {
+     "buildId": "@temporalio/worker@1.24.0+eac2fe5db0479e0fb8d324c0d54bfee99bae815e4a41557b1f0ef3306e06ef25"
+    },
+    "sdkMetadata": {},
+    "meteringMetadata": {}
+   }
+  },
+  {
+   "eventId": "35",
+   "eventTime": "2026-10-27T15:18:55.306685961Z",
+   "eventType": "EVENT_TYPE_WORKFLOW_EXECUTION_COMPLETED",
+   "taskId": "1048692",
+   "workflowExecutionCompletedEventAttributes": {
+    "result": {
+     "payloads": [
+      {
+       "metadata": {
+        "encoding": "anNvbi9wbGFpbg=="
+       },
+       "data": {
+        "project": "money",
+        "run": "chaos-deepseek-v4-flash-money",
+        "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+        "status": "REVIVED",
+        "attempts": 2,
+        "seance": {
+         "run": "chaos-deepseek-v4-flash-money",
+         "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+         "steps": 8,
+         "input_tokens": 41592,
+         "output_tokens": 1145,
+         "usd": 0.006143480000000001,
+         "stopped": "finished",
+         "last_test": {
+          "targets": 20,
+          "targets_passing": 20,
+          "all_passed": 20,
+          "collected": 25,
+          "timed_out": false,
+          "first_error": "ModuleNotFoundError: No module named 'babel'",
+          "failing_targets": [],
+          "pytest_tail": "e[level:], package, level)\nsrc/money/tests/test_xmoney.py:9: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n____________ ERROR collecting src-py2/money/tests/test_exchange.py _____________\nimport file mismatch:\nimported module 'money.tests.test_exchange' has this __file__ attribute:\n  <seance>/work/revive/chaos-deepseek-v4-flash-money/src/money/tests/test_exchange.py\nwhich is not the same as the test file we want to collect:\n  <seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_exchange.py\nHINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules\n______________ ERROR collecting src-py2/money/tests/test_money.py ______________\nImportError while importing test module '<seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_money.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc/money/tests/test_money.py:7: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n_____________ ERROR collecting src-py2/money/tests/test_xmoney.py ______________\nImportError while importing test module '<seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_xmoney.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc/money/tests/test_xmoney.py:9: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nERROR src/money/tests/test_money.py\nERROR src/money/tests/test_xmoney.py\nERROR src-py2/money/tests/test_exchange.py\nERROR src-py2/money/tests/test_money.py\nERROR src-py2/money/tests/test_xmoney.py\n20 passed, 5 errors in 0.32s\n"
+         }
+        },
+        "verdict": {
+         "py313": {
+          "targets": 20,
+          "passing": 20,
+          "missing": [],
+          "first_error": "ModuleNotFoundError: No module named 'babel'"
+         },
+         "py38": {
+          "targets": 20,
+          "passing": 20,
+          "missing": []
+         },
+         "protected_changed": [],
+         "diff_lines_changed": 10,
+         "files_changed": 2
+        }
+       },
+       "_decoded": "payload data base64-decoded for readability by seance tooling"
+      }
+     ]
+    },
+    "workflowTaskCompletedEventId": "34"
+   }
+  }
+ ]
+}

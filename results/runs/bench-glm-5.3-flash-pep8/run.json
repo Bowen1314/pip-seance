@@ -1,0 +1,52 @@
+{
+ "project": "pep8",
+ "run": "bench-glm-5.3-flash-pep8",
+ "model": "zai-org/GLM-5.3-Flash",
+ "status": "STILL DEAD",
+ "attempts": 1,
+ "seance": {
+  "run": "bench-glm-5.3-flash-pep8",
+  "model": "zai-org/GLM-5.3-Flash",
+  "steps": 8,
+  "input_tokens": 49155,
+  "output_tokens": 6425,
+  "usd": 0.01058575,
+  "stopped": "finished",
+  "last_test": {
+   "targets": 29,
+   "targets_passing": 25,
+   "all_passed": 25,
+   "collected": 30,
+   "timed_out": false,
+   "first_error": "AssertionError: 5 is not false : 5 failure(s)",
+   "failing_targets": [
+    "testsuite.test_all.Pep8TestCase::test_selftest",
+    "testsuite.test_api.APITestCase::test_check_nullbytes",
+    "testsuite.test_api.APITestCase::test_styleguide_continuation_line_outdented",
+    "testsuite.test_api.APITestCase::test_styleguide_unmatched_triple_quotes"
+   ],
+   "pytest_tail": "  self.assertEqual(count_errors, 2)\nE       AssertionError: 0 != 2\n\ntestsuite/test_api.py:381: AssertionError\n_____________ APITestCase.test_styleguide_unmatched_triple_quotes ______________\n\nself = <testsuite.test_api.APITestCase testMethod=test_styleguide_unmatched_triple_quotes>\n\n    def test_styleguide_unmatched_triple_quotes(self):\n        pep8.register_check(DummyChecker, ['Z701'])\n        lines = [\n            'def foo():\\n',\n            '    \"\"\"test docstring\"\"\\'\\n',\n        ]\n    \n        pep8style = pep8.StyleGuide()\n        pep8style.input_file('stdin', lines=lines)\n        stdout = sys.stdout.getvalue()\n    \n        expected = 'stdin:2:5: E901 TokenError: EOF in multi-line string'\n>       self.assertTrue(expected in stdout)\nE       AssertionError: False is not true\n\ntestsuite/test_api.py:365: AssertionError\n=============================== warnings summary ===============================\npep8.py:110\n  <seance>/work/revive/bench-glm-5.3-flash-pep8/pep8.py:110: FutureWarning: Possible nested set at position 1\n    EXTRANEOUS_WHITESPACE_REGEX = re.compile(r'[[({] | []}),;:]')\n\ntestsuite/test_shell.py::ShellTestCase::test_check_diff\ntestsuite/test_shell.py::ShellTestCase::test_check_noarg\ntestsuite/test_shell.py::ShellTestCase::test_check_non_existent\ntestsuite/test_shell.py::ShellTestCase::test_check_simple\ntestsuite/test_shell.py::ShellTestCase::test_check_stdin\ntestsuite/test_shell.py::ShellTestCase::test_print_usage\n  <seance>/work/revive/bench-glm-5.3-flash-pep8/pep8.py:2123: UserWarning: \n  \n  pep8 has been renamed to pycodestyle (GitHub issue #466)\n  Use of the pep8 tool will be removed in a future release.\n  Please install and use `pycodestyle` instead.\n  \n  $ pip install pycodestyle\n  $ pycodestyle ...\n  \n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nFAILED testsuite/test_all.py::Pep8TestCase::test_checkers_testsuite - Asserti...\nFAILED testsuite/test_all.py::Pep8TestCase::test_selftest - AssertionError: 1...\nFAILED testsuite/test_api.py::APITestCase::test_check_nullbytes - AssertionEr...\nFAILED testsuite/test_api.py::APITestCase::test_styleguide_continuation_line_outdented\nFAILED testsuite/test_api.py::APITestCase::test_styleguide_unmatched_triple_quotes\n5 failed, 25 passed, 7 warnings in 0.69s\n"
+  }
+ },
+ "verdict": {
+  "py313": {
+   "targets": 29,
+   "passing": 25,
+   "missing": [
+    "testsuite.test_all.Pep8TestCase::test_selftest",
+    "testsuite.test_api.APITestCase::test_check_nullbytes",
+    "testsuite.test_api.APITestCase::test_styleguide_continuation_line_outdented",
+    "testsuite.test_api.APITestCase::test_styleguide_unmatched_triple_quotes"
+   ],
+   "first_error": "AssertionError: 5 is not false : 5 failure(s)"
+  },
+  "py38": {
+   "targets": 29,
+   "passing": 29,
+   "missing": []
+  },
+  "protected_changed": [],
+  "diff_lines_changed": 0,
+  "files_changed": 0
+ }
+}

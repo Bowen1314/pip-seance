@@ -1,0 +1,77 @@
+{
+ "project": "python3-ldap",
+ "run": "bench-qwen3-30b-a3b-python3-ldap",
+ "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+ "status": "STILL DEAD",
+ "attempts": 1,
+ "seance": {
+  "run": "bench-qwen3-30b-a3b-python3-ldap",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "steps": 2,
+  "input_tokens": 3837,
+  "output_tokens": 4112,
+  "usd": 0.0016173,
+  "stopped": "finished",
+  "last_test": {
+   "targets": 36,
+   "targets_passing": 15,
+   "all_passed": 15,
+   "collected": 43,
+   "timed_out": false,
+   "first_error": "AttributeError: module 'collections' has no attribute 'MutableMapping'",
+   "failing_targets": [
+    "test.testCaseInsensitiveDictionary.Test::test_add_values_to_case_insentitive_dict",
+    "test.testCaseInsensitiveDictionary.Test::test_case_insensitive_dict_contains_different_case_key",
+    "test.testCaseInsensitiveDictionary.Test::test_case_insensitive_dict_contains_invariant_key",
+    "test.testCaseInsensitiveDictionary.Test::test_case_insensitive_dict_contains_same_case_key",
+    "test.testCaseInsensitiveDictionary.Test::test_copy_case_insensitive_dict",
+    "test.testCaseInsensitiveDictionary.Test::test_create_case_insensitive_dict_from_dict",
+    "test.testCaseInsensitiveDictionary.Test::test_create_case_insensitive_dict_from_parameters",
+    "test.testCaseInsensitiveDictionary.Test::test_create_empty_case_insensitive_dict",
+    "test.testCaseInsensitiveDictionary.Test::test_delete_item_in_case_insentitive_dict_different_case_key",
+    "test.testCaseInsensitiveDictionary.Test::test_delete_item_in_case_insentitive_dict_invariant_key",
+    "test.testCaseInsensitiveDictionary.Test::test_delete_item_in_case_insentitive_dict_same_case_key",
+    "test.testCaseInsensitiveDictionary.Test::test_equality_case_insensitive_dict_with_different_case"
+   ],
+   "pytest_tail": "erver, Connection, ServerPool, Tls, SASL\nldap3/__init__.py:254: in <module>\n    from .core.server import Server\nldap3/core/server.py:35: in <module>\n    from ..protocol.rfc4512 import SchemaInfo, DsaInfo\nldap3/protocol/rfc4512.py:33: in <module>\n    from ..utils.conv import escape_bytes, json_hook, check_json_dict, format_json, check_escape\nldap3/utils/conv.py:30: in <module>\n    from ..utils.ciDict import CaseInsensitiveDict\nldap3/utils/ciDict.py:31: in <module>\n    class CaseInsensitiveDict(collections.MutableMapping):\nE   AttributeError: module 'collections' has no attribute 'MutableMapping'\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nERROR test/testASN1.py - AttributeError: module 'collections' has no attribut...\nERROR test/testAbstractionDefs.py - AttributeError: module 'collections' has ...\nERROR test/testAbstractionSearch.py - AttributeError: module 'collections' ha...\nERROR test/testAddOperation.py\nERROR test/testBindOperation.py - AttributeError: module 'collections' has no...\nERROR test/testCaseInsensitiveDictionary.py\nERROR test/testCheckNames.py - AttributeError: module 'collections' has no at...\nERROR test/testCheckedAttributes.py - AttributeError: module 'collections' ha...\nERROR test/testCompareOperation.py\nERROR test/testConnection.py\nERROR test/testControls.py\nERROR test/testDeleteOperation.py\nERROR test/testExtendedOperations.py - AttributeError: module 'collections' h...\nERROR test/testExtensions.py - AttributeError: module 'collections' has no at...\nERROR test/testLDIF-change.py - AttributeError: module 'collections' has no a...\nERROR test/testLDIF-content.py\nERROR test/testMockSyncStrategy.py - AttributeError: module 'collections' has...\nERROR test/testModifyDNOperation.py\nERROR test/testModifyOperation.py - AttributeError: module 'collections' has ...\nERROR test/testOfflineSchema.py - AttributeError: module 'collections' has no...\nERROR test/testParseSearchFilter.py - AttributeError: module 'collections' ha...\nERROR test/testRestartable.py\nERROR test/testSaslPrep.py - AttributeError: module 'collections' has no attr...\nERROR test/testSchema.py - AttributeError: module 'collections' has no attrib...\nERROR test/testSearchOperation.py\nERROR test/testSearchOperationEntries.py\nERROR test/testSearchOperationJSON.py\nERROR test/testTls.py - AttributeError: module 'collections' has no attribute...\n15 passed, 28 errors in 2.30s\n"
+  }
+ },
+ "verdict": {
+  "py313": {
+   "targets": 36,
+   "passing": 15,
+   "missing": [
+    "test.testCaseInsensitiveDictionary.Test::test_add_values_to_case_insentitive_dict",
+    "test.testCaseInsensitiveDictionary.Test::test_case_insensitive_dict_contains_different_case_key",
+    "test.testCaseInsensitiveDictionary.Test::test_case_insensitive_dict_contains_invariant_key",
+    "test.testCaseInsensitiveDictionary.Test::test_case_insensitive_dict_contains_same_case_key",
+    "test.testCaseInsensitiveDictionary.Test::test_copy_case_insensitive_dict",
+    "test.testCaseInsensitiveDictionary.Test::test_create_case_insensitive_dict_from_dict",
+    "test.testCaseInsensitiveDictionary.Test::test_create_case_insensitive_dict_from_parameters",
+    "test.testCaseInsensitiveDictionary.Test::test_create_empty_case_insensitive_dict",
+    "test.testCaseInsensitiveDictionary.Test::test_delete_item_in_case_insentitive_dict_different_case_key",
+    "test.testCaseInsensitiveDictionary.Test::test_delete_item_in_case_insentitive_dict_invariant_key",
+    "test.testCaseInsensitiveDictionary.Test::test_delete_item_in_case_insentitive_dict_same_case_key",
+    "test.testCaseInsensitiveDictionary.Test::test_equality_case_insensitive_dict_with_different_case",
+    "test.testCaseInsensitiveDictionary.Test::test_equality_case_insensitive_dict_with_different_case_dict",
+    "test.testCaseInsensitiveDictionary.Test::test_equality_case_insensitive_dict_with_same_case",
+    "test.testCaseInsensitiveDictionary.Test::test_equality_case_insensitive_dict_with_same_case_dict",
+    "test.testCaseInsensitiveDictionary.Test::test_len_case_insentitive_dict",
+    "test.testCaseInsensitiveDictionary.Test::test_len_empty_case_insensitive_dict",
+    "test.testCaseInsensitiveDictionary.Test::test_modify_value_in_case_insentitive_dict_different_case_key",
+    "test.testCaseInsensitiveDictionary.Test::test_modify_value_in_case_insentitive_dict_invariant_key",
+    "test.testCaseInsensitiveDictionary.Test::test_modify_value_in_case_insentitive_dict_same_case_key",
+    "test.testCaseInsensitiveDictionary.Test::test_preserve_key_case_case_insensitive_dict"
+   ],
+   "first_error": "AttributeError: module 'collections' has no attribute 'MutableMapping'"
+  },
+  "py38": {
+   "targets": 36,
+   "passing": 36,
+   "missing": []
+  },
+  "protected_changed": [],
+  "diff_lines_changed": 0,
+  "files_changed": 0
+ }
+}

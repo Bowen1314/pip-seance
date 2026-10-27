@@ -1,0 +1,42 @@
+{
+ "project": "money",
+ "run": "chaos-deepseek-v4-flash-money",
+ "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "status": "REVIVED",
+ "attempts": 2,
+ "seance": {
+  "run": "chaos-deepseek-v4-flash-money",
+  "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+  "steps": 8,
+  "input_tokens": 41592,
+  "output_tokens": 1145,
+  "usd": 0.006143480000000001,
+  "stopped": "finished",
+  "last_test": {
+   "targets": 20,
+   "targets_passing": 20,
+   "all_passed": 20,
+   "collected": 25,
+   "timed_out": false,
+   "first_error": "ModuleNotFoundError: No module named 'babel'",
+   "failing_targets": [],
+   "pytest_tail": "e[level:], package, level)\nsrc/money/tests/test_xmoney.py:9: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n____________ ERROR collecting src-py2/money/tests/test_exchange.py _____________\nimport file mismatch:\nimported module 'money.tests.test_exchange' has this __file__ attribute:\n  <seance>/work/revive/chaos-deepseek-v4-flash-money/src/money/tests/test_exchange.py\nwhich is not the same as the test file we want to collect:\n  <seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_exchange.py\nHINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules\n______________ ERROR collecting src-py2/money/tests/test_money.py ______________\nImportError while importing test module '<seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_money.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc/money/tests/test_money.py:7: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n_____________ ERROR collecting src-py2/money/tests/test_xmoney.py ______________\nImportError while importing test module '<seance>/work/revive/chaos-deepseek-v4-flash-money/src-py2/money/tests/test_xmoney.py'.\nHint: make sure your test modules/packages have valid Python names.\nTraceback:\n../../../../.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\nsrc/money/tests/test_xmoney.py:9: in <module>\n    from .mixins import *\nsrc/money/tests/mixins.py:10: in <module>\n    import babel\nE   ModuleNotFoundError: No module named 'babel'\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nERROR src/money/tests/test_money.py\nERROR src/money/tests/test_xmoney.py\nERROR src-py2/money/tests/test_exchange.py\nERROR src-py2/money/tests/test_money.py\nERROR src-py2/money/tests/test_xmoney.py\n20 passed, 5 errors in 0.32s\n"
+  }
+ },
+ "verdict": {
+  "py313": {
+   "targets": 20,
+   "passing": 20,
+   "missing": [],
+   "first_error": "ModuleNotFoundError: No module named 'babel'"
+  },
+  "py38": {
+   "targets": 20,
+   "passing": 20,
+   "missing": []
+  },
+  "protected_changed": [],
+  "diff_lines_changed": 10,
+  "files_changed": 2
+ }
+}

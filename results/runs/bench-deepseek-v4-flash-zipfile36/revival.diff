@@ -1,0 +1,32 @@
+diff -ruN -x __pycache__ -x .pytest_cache a/zipfile36/nntplib.py b/zipfile36/nntplib.py
+--- a/zipfile36/nntplib.py	1969-12-31 19:00:00.000000000 -0500
++++ b/zipfile36/nntplib.py	2026-10-27 11:08:24.839752099 -0400
+@@ -0,0 +1,27 @@
++"""Compatibility shim for the ``nntplib`` module.
++
++``nntplib`` was removed from the standard library in Python 3.13.  The
++vendored ``test.support`` still imports it and references
++``nntplib.NNTPTemporaryError``.  This module provides just enough of the
++old API for that code to keep working.
++"""
++
++
++class NNTPError(Exception):
++    """Base class for nntplib errors."""
++
++
++class NNTPTemporaryError(NNTPError):
++    """Exception raised for NNTP errors that are temporary."""
++
++
++class NNTPPermanentError(NNTPError):
++    """Exception raised for NNTP errors that are permanent."""
++
++
++class NNTPProtocolError(NNTPError):
++    """Exception raised when the NNTP protocol is violated."""
++
++
++class NNTPDataError(NNTPError):
++    """Exception raised when there is an error in the NNTP data."""
+\ No newline at end of file

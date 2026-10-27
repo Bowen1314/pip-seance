@@ -1,0 +1,29 @@
+diff -ruN -x __pycache__ -x .pytest_cache a/python3-ldap/ldap3/utils/ciDict.py b/python3-ldap/ldap3/utils/ciDict.py
+--- a/python3-ldap/ldap3/utils/ciDict.py	2015-01-09 03:19:07.000000000 -0500
++++ b/python3-ldap/ldap3/utils/ciDict.py	2026-10-27 11:09:39.600817883 -0400
+@@ -25,10 +25,15 @@
+ 
+ import collections
+ 
++try:
++    from collections.abc import MutableMapping, Mapping
++except ImportError:
++    from collections import MutableMapping, Mapping
++
+ from .. import SEQUENCE_TYPES
+ 
+ 
+-class CaseInsensitiveDict(collections.MutableMapping):
++class CaseInsensitiveDict(MutableMapping):
+     if bytes == str:  # python2
+         _case_insensitive_types = (str, unicode)
+     else:  # python3
+@@ -85,7 +90,7 @@
+         return self._store.values()
+ 
+     def __eq__(self, other):
+-        if not isinstance(other, (collections.Mapping, dict)):
++        if not isinstance(other, (Mapping, dict)):
+             return NotImplemented
+ 
+         if isinstance(other, CaseInsensitiveDict):

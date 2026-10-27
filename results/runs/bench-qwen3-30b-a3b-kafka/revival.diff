@@ -1,0 +1,43 @@
+diff -ruN -x __pycache__ -x .pytest_cache a/kafka/kafka/vendor/__init__.py b/kafka/kafka/vendor/__init__.py
+--- a/kafka/kafka/vendor/__init__.py	2017-08-13 23:07:33.000000000 -0400
++++ b/kafka/kafka/vendor/__init__.py	2026-10-27 11:12:15.095954678 -0400
+@@ -0,0 +1,39 @@
++from .six import *
++
++# Ensure the moves module is properly initialized
++# This is critical for Python 3.13's import system
++
++# Create the moves module if it doesn't exist
++import types
++
++# Get the six module
++six_module = __import__('kafka.vendor.six')
++
++# Create the moves module
++moves_module = types.ModuleType('kafka.vendor.six.moves')
++
++# Import all moves from six.moves
++try:
++    from .six.moves import *
++    # Add all imported items to the moves module
++    for name in dir():
++        if not name.startswith('_') and name not in ['__name__', '__doc__', '__package__', '__loader__', '__spec__', '__path__', '__file__', '__cached__', '__builtins__', '__import__']:
++            setattr(moves_module, name, globals()[name])
++except ImportError:
++    # If the import fails, create an empty moves module
++    pass
++
++# Add the moves module to the namespace
++setattr(six_module, 'moves', moves_module)
++setattr(__import__('kafka.vendor'), 'moves', moves_module)
++
++# Also ensure the moves module is available directly
++try:
++    from .six.moves import queue
++except ImportError:
++    pass
++
++try:
++    from .six.moves import xrange
++except ImportError:
++    pass

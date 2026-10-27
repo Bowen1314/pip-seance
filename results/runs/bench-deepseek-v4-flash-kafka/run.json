@@ -1,0 +1,42 @@
+{
+ "project": "kafka",
+ "run": "bench-deepseek-v4-flash-kafka",
+ "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "status": "REVIVED",
+ "attempts": 1,
+ "seance": {
+  "run": "bench-deepseek-v4-flash-kafka",
+  "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+  "steps": 17,
+  "input_tokens": 288411,
+  "output_tokens": 8902,
+  "usd": 0.0428701,
+  "stopped": "cost_cap",
+  "last_test": {
+   "targets": 41,
+   "targets_passing": 41,
+   "all_passed": 41,
+   "collected": 79,
+   "timed_out": false,
+   "first_error": "SyntaxError: invalid syntax",
+   "failing_targets": [],
+   "pytest_tail": "=============================\nkafka/client_async.py:910\nkafka/client_async.py:910\n  <seance>/work/revive/bench-deepseek-v4-flash-kafka/kafka/client_async.py:910: SyntaxWarning: \"is\" with 'str' literal. Did you mean \"==\"?\n    while self._tasks and self._tasks[0][-1] is 'REMOVED':\n\nkafka/client_async.py:918\n  <seance>/work/revive/bench-deepseek-v4-flash-kafka/kafka/client_async.py:918: SyntaxWarning: \"is\" with 'str' literal. Did you mean \"==\"?\n    if maybe_task is 'REMOVED':\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nFAILED test/test_buffer.py::test_compressed_buffer_close[snappy] - AssertionE...\nFAILED test/test_buffer.py::test_compressed_buffer_close[compression2] - Type...\nERROR test/test_assignors.py\nERROR test/test_client.py\nERROR test/test_client_async.py\nERROR test/test_client_integration.py\nERROR test/test_codec.py\nERROR test/test_conn.py\nERROR test/test_consumer.py\nERROR test/test_consumer_group.py\nERROR test/test_consumer_integration.py\nERROR test/test_context.py\nERROR test/test_coordinator.py\nERROR test/test_failover_integration.py\nERROR test/test_package.py\nERROR test/test_producer.py\nERROR test/test_producer_integration.py\nERROR test/test_producer_legacy.py\nERROR test/test_protocol_legacy.py\nERROR test/test_sender.py\nERROR test/test_util.py\nERROR test/testutil.py\nERROR test/test_fetcher.py::test_send_fetches\nERROR test/test_fetcher.py::test_create_fetch_requests[api_version0-3]\nERROR test/test_fetcher.py::test_create_fetch_requests[api_version1-2]\nERROR test/test_fetcher.py::test_create_fetch_requests[api_version2-1]\nERROR test/test_fetcher.py::test_create_fetch_requests[api_version3-0]\nERROR test/test_fetcher.py::test_update_fetch_positions\nERROR test/test_fetcher.py::test__reset_offset\nERROR test/test_fetcher.py::test__send_offset_requests\nERROR test/test_fetcher.py::test__send_offset_requests_multiple_nodes\nERROR test/test_fetcher.py::test__handle_offset_response\nERROR test/test_metrics.py::test_simple_stats\nERROR test/test_metrics.py::test_remove_inactive_metrics\nERROR test/test_metrics.py::test_event_windowing\nERROR test/test_metrics.py::test_time_windowing\nERROR test/test_metrics.py::test_old_data_has_no_effect\nERROR test/test_metrics.py::test_rate_windowing\n2 failed, 41 passed, 3 warnings, 36 errors in 2.90s\n"
+  }
+ },
+ "verdict": {
+  "py313": {
+   "targets": 41,
+   "passing": 41,
+   "missing": [],
+   "first_error": "SyntaxError: invalid syntax"
+  },
+  "py38": {
+   "targets": 41,
+   "passing": 41,
+   "missing": []
+  },
+  "protected_changed": [],
+  "diff_lines_changed": 12,
+  "files_changed": 1
+ }
+}

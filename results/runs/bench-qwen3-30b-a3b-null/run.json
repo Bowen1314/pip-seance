@@ -1,0 +1,42 @@
+{
+ "project": "null",
+ "run": "bench-qwen3-30b-a3b-null",
+ "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+ "status": "REVIVED",
+ "attempts": 1,
+ "seance": {
+  "run": "bench-qwen3-30b-a3b-null",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "steps": 6,
+  "input_tokens": 12692,
+  "output_tokens": 232,
+  "usd": 0.0013388,
+  "stopped": "finished",
+  "last_test": {
+   "targets": 6,
+   "targets_passing": 6,
+   "all_passed": 6,
+   "collected": 6,
+   "timed_out": false,
+   "first_error": null,
+   "failing_targets": [],
+   "pytest_tail": "......                                                                   [100%]\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n6 passed in 0.10s\n"
+  }
+ },
+ "verdict": {
+  "py313": {
+   "targets": 6,
+   "passing": 6,
+   "missing": [],
+   "first_error": null
+  },
+  "py38": {
+   "targets": 6,
+   "passing": 6,
+   "missing": []
+  },
+  "protected_changed": [],
+  "diff_lines_changed": 2,
+  "files_changed": 1
+ }
+}

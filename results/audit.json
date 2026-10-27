@@ -1,0 +1,53 @@
+{
+ "_about": "Hand review of every diff that made all target tests pass, plus the cause of death read from the 3.13 test output. Written after the runs; not seen by any model.",
+ "cause_of_death": {
+  "zipfile36": "Its bundled copy of CPython's test.support imports nntplib, which Python 3.13 removed. The library itself was fine.",
+  "pep8": "Python 3.12's new tokenizer reports some errors differently (e.g. null bytes), so pep8's self-test expectations no longer match.",
+  "kafka": "The vendored six's import hook only implements find_module/load_module, which Python 3.12 stopped calling; kafka.vendor.six.moves no longer imports.",
+  "cookies": "A regex with a global inline flag group (?ix) in the middle of a pattern; an error since Python 3.11.",
+  "pyxb": "Same vendored-six import hook as kafka, plus more 3.13 changes behind it.",
+  "logutils": "logging._acquireLock/_releaseLock, private helpers, were removed in Python 3.13.",
+  "paver": "distutils was removed in 3.12; without setuptools installed there is no distutils at all, and paver's tests are built on it.",
+  "python3-ldap": "collections.MutableMapping/Mapping aliases were removed in Python 3.10.",
+  "null": "collections.MutableMapping/MutableSequence aliases were removed in Python 3.10.",
+  "money": "distutils.version.StrictVersion: distutils was removed in Python 3.12."
+ },
+ "revivals": {
+  "bench-deepseek-v4-flash-kafka": {
+   "verdict": "sound",
+   "note": "Adds find_spec/create_module/exec_module to the vendored six importer: the same shape as the fix six itself shipped in 1.16.0."
+  },
+  "bench-deepseek-v4-flash-python3-ldap": {
+   "verdict": "sound",
+   "note": "Imports MutableMapping/Mapping from collections.abc with a fallback for old Pythons."
+  },
+  "bench-deepseek-v4-flash-null": {
+   "verdict": "sound",
+   "note": "collections.abc import with a fallback."
+  },
+  "bench-qwen3-30b-a3b-null": {
+   "verdict": "sound",
+   "note": "collections.abc import, no fallback (fine: collections.abc exists since 3.3)."
+  },
+  "bench-deepseek-v4-flash-money": {
+   "verdict": "works, with a caveat",
+   "note": "Falls back to packaging.version (importable here only because pytest depends on it), else to a hand-written StrictVersion that only understands dotted integers. Fine for the Babel version check it guards; declaring packaging would be cleaner."
+  },
+  "bench-deepseek-v4-flash-zipfile36": {
+   "verdict": "works, but the library was never dead",
+   "note": "Adds a 27-line nntplib.py stub at the sdist root so the bundled test.support can import it. zipfile36 itself is untouched: it was the test kit that died."
+  },
+  "round2-deepseek-v4-flash-logutils": {
+   "verdict": "works, with a caveat",
+   "note": "Re-creates logging._acquireLock/_releaseLock on the stdlib logging module when missing. Works on 3.8 and 3.13, but patches a global module; a private helper inside logutils would be tidier."
+  },
+  "smoke-deepseek-v4-flash-money": {
+   "verdict": "works, with a caveat",
+   "note": "Same approach as the bench run; its fallback class only defines __lt__."
+  },
+  "chaos-deepseek-v4-flash-money": {
+   "verdict": "works, with a caveat",
+   "note": "Falls back to packaging.version.Version. packaging is importable here only because pytest depends on it; a real release would have to declare it."
+  }
+ }
+}

@@ -1,0 +1,48 @@
+diff -ruN -x __pycache__ -x .pytest_cache a/money/src/money/money.py b/money/src/money/money.py
+--- a/money/src/money/money.py	2016-04-17 09:41:45.000000000 -0400
++++ b/money/src/money/money.py	2026-10-27 11:06:25.019646667 -0400
+@@ -3,7 +3,19 @@
+ """
+ import decimal
+ import re
+-from distutils.version import StrictVersion
++
++try:
++    from distutils.version import StrictVersion
++except ImportError:
++    try:
++        from packaging.version import Version as StrictVersion
++    except ImportError:
++        class StrictVersion(object):
++            """Minimal fallback for distutils.version.StrictVersion"""
++            def __init__(self, version):
++                self.version = version
++            def __lt__(self, other):
++                return self.version < other.version
+ 
+ from .exchange import xrates
+ from .exceptions import (CurrencyMismatch, ExchangeRateNotFound,
+diff -ruN -x __pycache__ -x .pytest_cache a/money/src-py2/money/money.py b/money/src-py2/money/money.py
+--- a/money/src-py2/money/money.py	2016-04-17 09:41:45.000000000 -0400
++++ b/money/src-py2/money/money.py	2026-10-27 11:06:26.441647919 -0400
+@@ -4,7 +4,19 @@
+ """
+ import decimal
+ import re
+-from distutils.version import StrictVersion
++
++try:
++    from distutils.version import StrictVersion
++except ImportError:
++    try:
++        from packaging.version import Version as StrictVersion
++    except ImportError:
++        class StrictVersion(object):
++            """Minimal fallback for distutils.version.StrictVersion"""
++            def __init__(self, version):
++                self.version = version
++            def __lt__(self, other):
++                return self.version < other.version
+ 
+ from .exchange import xrates
+ from .exceptions import (CurrencyMismatch, ExchangeRateNotFound,

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>pip-seance: the graveyard</title>
+<style>
+:root{--bg:#14121a;--stone:#2a2732;--ink:#e8e1d0;--dim:#9a93a6;--gold:#f2a541;--teal:#7fb7be;--red:#c8695a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+header{max-width:1100px;margin:0 auto;padding:40px 24px 8px}h1{font:600 34px/1.1 Georgia,serif;margin:0 0 8px;letter-spacing:.5px}
+header p{color:var(--dim);max-width:780px;margin:6px 0}header b{color:var(--ink)}
+main{max-width:1100px;margin:0 auto;padding:16px 24px 48px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.stone{background:var(--stone);border-radius:110px 110px 10px 10px;padding:36px 20px 18px;text-align:center;border-bottom:6px solid #1c1a22;position:relative}
+.stone.risen{box-shadow:0 0 0 2px var(--gold),0 0 28px rgba(242,165,65,.25)}
+.stone h2{font:600 21px Georgia,serif;margin:0 0 4px}.dates,.dl,.tests{color:var(--dim);font-size:13px;margin:2px 0}
+.cod{font-size:13px;margin:12px 0;min-height:60px}.badges{display:flex;flex-direction:column;gap:6px}
+.b{display:block;font-size:12px;padding:4px 8px;border-radius:6px;text-decoration:none;color:var(--bg)}
+.rev{background:var(--gold)}.stir{background:var(--teal)}.dead{background:#4a4556;color:var(--ink)}
+footer{max-width:1100px;margin:0 auto;padding:0 24px 40px;color:var(--dim);font-size:13px}a{color:var(--gold)}
+</style></head><body>
+<header><h1>pip-seance · the graveyard</h1>
+<p>Of the 15,000 most-downloaded PyPI projects, <b>427</b> have not uploaded a file since before 2018.
+<b>45</b> of those still passed their own tests on Python 3.8.
+<b>10</b> fail them on Python 3.13. These are their headstones.</p>
+<p>Each badge is one seance: an open-weight model (Mastra agent, Nebius Token Factory) editing library code only, inside a Temporal workflow,
+judged by the package's untouched original tests. Gold stones were raised. Click a badge for the epitaph.</p></header>
+<main>
+<article class="stone risen">
+<h2>zipfile36</h2>
+<p class="dates">0.1.3 · last upload 2016-10-16</p>
+<p class="dl">1,178,018 downloads in the last 30 days</p>
+<p class="cod">Its bundled copy of CPython&#x27;s test.support imports nntplib, which Python 3.13 removed. The library itself was fine.</p>
+<p class="tests">168 tests passed on Python 3.8 · 0 pass on 3.13</p>
+<div class="badges"><a class="b rev" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-deepseek-v4-flash-zipfile36/EPITAPH.md">DeepSeek V4 Flash: revived 168/168 · $0.010</a><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-qwen3-30b-a3b-zipfile36/EPITAPH.md">Qwen3-30B-A3B: still dead 0/168 · $0.042</a></div>
+</article>
+<article class="stone">
+<h2>pep8</h2>
+<p class="dates">1.7.1 · last upload 2017-10-24</p>
+<p class="dl">1,130,176 downloads in the last 30 days</p>
+<p class="cod">Python 3.12&#x27;s new tokenizer reports some errors differently (e.g. null bytes), so pep8&#x27;s self-test expectations no longer match.</p>
+<p class="tests">29 tests passed on Python 3.8 · 25 pass on 3.13</p>
+<div class="badges"><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-deepseek-v4-flash-pep8/EPITAPH.md">DeepSeek V4 Flash: still dead 25/29 · $0.025</a><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-qwen3-30b-a3b-pep8/EPITAPH.md">Qwen3-30B-A3B: still dead 25/29 · $0.034</a><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-glm-5.3-flash-pep8/EPITAPH.md">GLM-5.3-Flash: still dead 25/29 · $0.011</a></div>
+</article>
+<article class="stone risen">
+<h2>kafka</h2>
+<p class="dates">1.3.5 · last upload 2017-10-07</p>
+<p class="dl">239,184 downloads in the last 30 days</p>
+<p class="cod">The vendored six&#x27;s import hook only implements find_module/load_module, which Python 3.12 stopped calling; kafka.vendor.six.moves no longer imports.</p>
+<p class="tests">41 tests passed on Python 3.8 · 0 pass on 3.13</p>
+<div class="badges"><a class="b rev" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-deepseek-v4-flash-kafka/EPITAPH.md">DeepSeek V4 Flash: revived 41/41 · $0.043</a><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-qwen3-30b-a3b-kafka/EPITAPH.md">Qwen3-30B-A3B: still dead 0/41 · $0.098</a></div>
+</article>
+<article class="stone">
+<h2>cookies</h2>
+<p class="dates">2.2.1 · last upload 2014-09-27</p>
+<p class="dl">182,317 downloads in the last 30 days</p>
+<p class="cod">A regex with a global inline flag group (?ix) in the middle of a pattern; an error since Python 3.11.</p>
+<p class="tests">66 tests passed on Python 3.8 · 0 pass on 3.13</p>
+<div class="badges"><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-deepseek-v4-flash-cookies/EPITAPH.md">DeepSeek V4 Flash: still dead 0/66 · $0.041</a><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-qwen3-30b-a3b-cookies/EPITAPH.md">Qwen3-30B-A3B: still dead 0/66 · $0.031</a><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-glm-5.3-flash-cookies/EPITAPH.md">GLM-5.3-Flash: still dead 0/66 · $0.006</a><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/round2-deepseek-v4-flash-cookies/EPITAPH.md">DeepSeek V4 Flash (round 2): still dead 0/66 · $0.043</a></div>
+</article>
+<article class="stone">
+<h2>pyxb</h2>
+<p class="dates">1.2.6 · last upload 2017-09-03</p>
+<p class="dl">110,732 downloads in the last 30 days</p>
+<p class="cod">Same vendored-six import hook as kafka, plus more 3.13 changes behind it.</p>
+<p class="tests">736 tests passed on Python 3.8 · 10 pass on 3.13</p>
+<div class="badges"><a class="b stir" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-deepseek-v4-flash-pyxb/EPITAPH.md">DeepSeek V4 Flash: stirred 153/736 · $0.043</a><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-qwen3-30b-a3b-pyxb/EPITAPH.md">Qwen3-30B-A3B: still dead 10/736 · $0.040</a><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-glm-5.3-flash-pyxb/EPITAPH.md">GLM-5.3-Flash: still dead 10/736 · $0.015</a></div>
+</article>
+<article class="stone risen">
+<h2>logutils</h2>
+<p class="dates">0.3.5 · last upload 2017-06-24</p>
+<p class="dl">104,273 downloads in the last 30 days</p>
+<p class="cod">logging._acquireLock/_releaseLock, private helpers, were removed in Python 3.13.</p>
+<p class="tests">31 tests passed on Python 3.8 · 16 pass on 3.13</p>
+<div class="badges"><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-deepseek-v4-flash-logutils/EPITAPH.md">DeepSeek V4 Flash: still dead 16/31 · $0.041</a><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-qwen3-30b-a3b-logutils/EPITAPH.md">Qwen3-30B-A3B: still dead 16/31 · $0.041</a><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-glm-5.3-flash-logutils/EPITAPH.md">GLM-5.3-Flash: still dead 16/31 · $0.043</a><a class="b rev" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/round2-deepseek-v4-flash-logutils/EPITAPH.md">DeepSeek V4 Flash (round 2): revived 31/31 · $0.016</a></div>
+</article>
+<article class="stone">
+<h2>paver</h2>
+<p class="dates">1.3.4 · last upload 2017-12-31</p>
+<p class="dl">100,855 downloads in the last 30 days</p>
+<p class="cod">distutils was removed in 3.12; without setuptools installed there is no distutils at all, and paver&#x27;s tests are built on it.</p>
+<p class="tests">99 tests passed on Python 3.8 · 39 pass on 3.13</p>
+<div class="badges"><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-deepseek-v4-flash-paver/EPITAPH.md">DeepSeek V4 Flash: still dead 39/99 · $0.042</a><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-qwen3-30b-a3b-paver/EPITAPH.md">Qwen3-30B-A3B: still dead 39/99 · $0.063</a></div>
+</article>
+<article class="stone risen">
+<h2>python3-ldap</h2>
+<p class="dates">0.9.8.4 · last upload 2015-05-28</p>
+<p class="dl">82,404 downloads in the last 30 days</p>
+<p class="cod">collections.MutableMapping/Mapping aliases were removed in Python 3.10.</p>
+<p class="tests">36 tests passed on Python 3.8 · 15 pass on 3.13</p>
+<div class="badges"><a class="b rev" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-deepseek-v4-flash-python3-ldap/EPITAPH.md">DeepSeek V4 Flash: revived 36/36 · $0.005</a><a class="b dead" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-qwen3-30b-a3b-python3-ldap/EPITAPH.md">Qwen3-30B-A3B: still dead 15/36 · $0.002</a></div>
+</article>
+<article class="stone risen">
+<h2>null</h2>
+<p class="dates">0.6.1 · last upload 2013-03-05</p>
+<p class="dl">78,899 downloads in the last 30 days</p>
+<p class="cod">collections.MutableMapping/MutableSequence aliases were removed in Python 3.10.</p>
+<p class="tests">6 tests passed on Python 3.8 · 0 pass on 3.13</p>
+<div class="badges"><a class="b rev" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-deepseek-v4-flash-null/EPITAPH.md">DeepSeek V4 Flash: revived 6/6 · $0.002</a><a class="b rev" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-qwen3-30b-a3b-null/EPITAPH.md">Qwen3-30B-A3B: revived 6/6 · $0.001</a></div>
+</article>
+<article class="stone risen">
+<h2>money</h2>
+<p class="dates">1.3.0 · last upload 2016-04-17</p>
+<p class="dl">56,238 downloads in the last 30 days</p>
+<p class="cod">distutils.version.StrictVersion: distutils was removed in Python 3.12.</p>
+<p class="tests">20 tests passed on Python 3.8 · 0 pass on 3.13</p>
+<div class="badges"><a class="b rev" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-deepseek-v4-flash-money/EPITAPH.md">DeepSeek V4 Flash: revived 20/20 · $0.015</a><a class="b stir" href="https://github.com/Bowen1314/pip-seance/blob/main/results/runs/bench-qwen3-30b-a3b-money/EPITAPH.md">Qwen3-30B-A3B: stirred 15/20 · $0.041</a></div>
+</article>
+</main>
+<footer>Total spend for every model call in the project: $0.83. Code, ledger, transcripts and diffs:
+<a href="https://github.com/Bowen1314/pip-seance">https://github.com/Bowen1314/pip-seance</a>. Generated by <code>seance/summarize.py</code>.</footer>
+</body></html>

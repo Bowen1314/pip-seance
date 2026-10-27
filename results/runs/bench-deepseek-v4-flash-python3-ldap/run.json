@@ -1,0 +1,42 @@
+{
+ "project": "python3-ldap",
+ "run": "bench-deepseek-v4-flash-python3-ldap",
+ "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "status": "REVIVED",
+ "attempts": 1,
+ "seance": {
+  "run": "bench-deepseek-v4-flash-python3-ldap",
+  "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+  "steps": 7,
+  "input_tokens": 34246,
+  "output_tokens": 1520,
+  "usd": 0.0052200400000000004,
+  "stopped": "finished",
+  "last_test": {
+   "targets": 36,
+   "targets_passing": 36,
+   "all_passed": 36,
+   "collected": 63,
+   "timed_out": false,
+   "first_error": "SyntaxError: invalid syntax",
+   "failing_targets": [],
+   "pytest_tail": "_user, drop_connection, test_int_attr, test_server_type\nE   ImportError: cannot import name 'test_base' from 'test' (unknown location)\n_______________________ ERROR collecting test/testTls.py _______________________\n../../../envs/py313/lib/python3.13/site-packages/_pytest/python.py:493: in importtestmodule\n    mod = import_path(\n../../../envs/py313/lib/python3.13/site-packages/_pytest/pathlib.py:587: in import_path\n    importlib.import_module(module_name)\n../../../../.local/share/uv/python/cpython-3.13.18-linux-x86_64-gnu/lib/python3.13/importlib/__init__.py:88: in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n<frozen importlib._bootstrap>:1404: in _gcd_import\n    ???\n<frozen importlib._bootstrap>:1369: in _find_and_load\n    ???\n<frozen importlib._bootstrap>:1340: in _find_and_load_unlocked\n    ???\n<frozen importlib._bootstrap>:935: in _load_unlocked\n    ???\n../../../envs/py313/lib/python3.13/site-packages/_pytest/assertion/rewrite.py:185: in exec_module\n    exec(co, module.__dict__)\ntest/testTls.py:26: in <module>\n    from ldap3 import Server, Connection, ServerPool, Tls, SASL\nldap3/__init__.py:255: in <module>\n    from .core.connection import Connection\nE     File \"<seance>/work/revive/bench-deepseek-v4-flash-python3-ldap/ldap3/core/connection.py\", line 53\nE       from ..strategy.async import AsyncStrategy\nE                       ^^^^^\nE   SyntaxError: invalid syntax\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nERROR test/testASN1.py\nERROR test/testAbstractionDefs.py\nERROR test/testAbstractionSearch.py\nERROR test/testAddOperation.py\nERROR test/testBindOperation.py\nERROR test/testCheckNames.py\nERROR test/testCheckedAttributes.py\nERROR test/testCompareOperation.py\nERROR test/testConnection.py\nERROR test/testControls.py\nERROR test/testDeleteOperation.py\nERROR test/testExtendedOperations.py\nERROR test/testExtensions.py\nERROR test/testLDIF-change.py\nERROR test/testLDIF-content.py\nERROR test/testMockSyncStrategy.py\nERROR test/testModifyDNOperation.py\nERROR test/testModifyOperation.py\nERROR test/testOfflineSchema.py\nERROR test/testParseSearchFilter.py\nERROR test/testRestartable.py\nERROR test/testSaslPrep.py\nERROR test/testSchema.py\nERROR test/testSearchOperation.py\nERROR test/testSearchOperationEntries.py\nERROR test/testSearchOperationJSON.py\nERROR test/testTls.py\n36 passed, 27 errors in 2.12s\n"
+  }
+ },
+ "verdict": {
+  "py313": {
+   "targets": 36,
+   "passing": 36,
+   "missing": [],
+   "first_error": "SyntaxError: invalid syntax"
+  },
+  "py38": {
+   "targets": 36,
+   "passing": 36,
+   "missing": []
+  },
+  "protected_changed": [],
+  "diff_lines_changed": 9,
+  "files_changed": 1
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "project": "logutils",
+ "run": "bench-qwen3-30b-a3b-logutils",
+ "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+ "status": "STILL DEAD",
+ "attempts": 1,
+ "seance": {
+  "run": "bench-qwen3-30b-a3b-logutils",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "steps": 32,
+  "input_tokens": 405720,
+  "output_tokens": 753,
+  "usd": 0.04079789999999999,
+  "stopped": "cost_cap",
+  "last_test": {
+   "targets": 31,
+   "targets_passing": 16,
+   "all_passed": 16,
+   "collected": 34,
+   "timed_out": false,
+   "first_error": "ModuleNotFoundError: No module named 'redis'",
+   "failing_targets": [
+    "tests.test_dictconfig.ConfigDictTest::test_config0_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config1_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config2_failure",
+    "tests.test_dictconfig.ConfigDictTest::test_config2a_failure",
+    "tests.test_dictconfig.ConfigDictTest::test_config2b_failure",
+    "tests.test_dictconfig.ConfigDictTest::test_config3_failure",
+    "tests.test_dictconfig.ConfigDictTest::test_config4_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config4a_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config5_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config6_failure",
+    "tests.test_dictconfig.ConfigDictTest::test_config7_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config_10_ok"
+   ],
+   "pytest_tail": "estCollectionWarning: cannot collect test class 'TestHandler' because it has a __init__ constructor (from: tests/test_testing.py)\n    class TestHandler(BufferingHandler):\n\ntests/test_dictconfig.py::testHandler\n  <seance>/envs/py313/lib/python3.13/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/test_dictconfig.py::testHandler returned <TestHandler (NOTSET)>, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?\n    warnings.warn(\n\ntests/test_queue.py::QueueTest::test_multiple\ntests/test_queue.py::QueueTest::test_partial\ntests/test_queue.py::QueueTest::test_simple\n  <seance>/work/revive/bench-qwen3-30b-a3b-logutils/logutils/queue.py:144: DeprecationWarning: setDaemon() is deprecated, set the daemon attribute instead\n    t.setDaemon(True)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nFAILED tests/test_adapter.py::AdapterTest::test_hashandlers - AssertionError:...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config0_ok - AttributeE...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config1_ok - AttributeE...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config2_failure - Attri...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config2a_failure - Attr...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config2b_failure - Attr...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config3_failure - Attri...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config4_ok - AttributeE...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config4a_ok - Attribute...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config5_ok - AttributeE...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config6_failure - Attri...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config7_ok - AttributeE...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config_10_ok - Attribut...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config_11_ok - Attribut...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config_8_ok - Attribute...\nFAILED tests/test_dictconfig.py::ConfigDictTest::test_config_9_ok - Attribute...\nERROR tests/test_redis.py\n16 failed, 16 passed, 1 skipped, 9 warnings, 1 error in 0.39s\n"
+  }
+ },
+ "verdict": {
+  "py313": {
+   "targets": 31,
+   "passing": 16,
+   "missing": [
+    "tests.test_dictconfig.ConfigDictTest::test_config0_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config1_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config2_failure",
+    "tests.test_dictconfig.ConfigDictTest::test_config2a_failure",
+    "tests.test_dictconfig.ConfigDictTest::test_config2b_failure",
+    "tests.test_dictconfig.ConfigDictTest::test_config3_failure",
+    "tests.test_dictconfig.ConfigDictTest::test_config4_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config4a_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config5_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config6_failure",
+    "tests.test_dictconfig.ConfigDictTest::test_config7_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config_10_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config_11_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config_8_ok",
+    "tests.test_dictconfig.ConfigDictTest::test_config_9_ok"
+   ],
+   "first_error": "ModuleNotFoundError: No module named 'redis'"
+  },
+  "py38": {
+   "targets": 31,
+   "passing": 31,
+   "missing": []
+  },
+  "protected_changed": [],
+  "diff_lines_changed": 0,
+  "files_changed": 0
+ }
+}

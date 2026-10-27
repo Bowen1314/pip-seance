@@ -1,0 +1,60 @@
+{
+ "project": "money",
+ "run": "bench-qwen3-30b-a3b-money",
+ "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+ "status": "STIRRED",
+ "attempts": 1,
+ "seance": {
+  "run": "bench-qwen3-30b-a3b-money",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "steps": 28,
+  "input_tokens": 389741,
+  "output_tokens": 6631,
+  "usd": 0.0409634,
+  "stopped": "cost_cap",
+  "last_test": {
+   "targets": 20,
+   "targets_passing": 15,
+   "all_passed": 15,
+   "collected": 25,
+   "timed_out": false,
+   "first_error": "ModuleNotFoundError: No module named 'babel'",
+   "failing_targets": [
+    "src.money.tests.test_exchange.TestMoneyConversion::test_unavailable_backend_conversion_error",
+    "src.money.tests.test_exchange.TestMoneyConversion::test_unavailable_rate_conversion_error",
+    "src.money.tests.test_exchange.TestSimpleBackend::test_money_conversion",
+    "src.money.tests.test_exchange.TestXMoneyConversion::test_unavailable_backend_conversion_error",
+    "src.money.tests.test_exchange.TestXMoneyConversion::test_unavailable_rate_conversion_error"
+   ],
+   "pytest_tail": "'to'\n\nsrc/money/tests/test_exchange.py:154: AttributeError\n__________ TestMoneyConversion.test_unavailable_rate_conversion_error __________\n\nself = <money.tests.test_exchange.TestMoneyConversion testMethod=test_unavailable_rate_conversion_error>\n\n    def test_unavailable_rate_conversion_error(self):\n        xrates.install('money.exchange.SimpleBackend')\n        with self.assertRaises(ExchangeRateNotFound):\n>           self.MoneyClass('2', 'AAA').to('BBB')\nE           AttributeError: 'Money' object has no attribute 'to'\n\nsrc/money/tests/test_exchange.py:159: AttributeError\n________ TestXMoneyConversion.test_unavailable_backend_conversion_error ________\n\nself = <money.tests.test_exchange.TestXMoneyConversion testMethod=test_unavailable_backend_conversion_error>\n\n    def test_unavailable_backend_conversion_error(self):\n        xrates.uninstall()\n        with self.assertRaises(ExchangeBackendNotInstalled):\n>           self.MoneyClass('2', 'AAA').to('BBB')\nE           AttributeError: 'XMoney' object has no attribute 'to'\n\nsrc/money/tests/test_exchange.py:154: AttributeError\n_________ TestXMoneyConversion.test_unavailable_rate_conversion_error __________\n\nself = <money.tests.test_exchange.TestXMoneyConversion testMethod=test_unavailable_rate_conversion_error>\n\n    def test_unavailable_rate_conversion_error(self):\n        xrates.install('money.exchange.SimpleBackend')\n        with self.assertRaises(ExchangeRateNotFound):\n>           self.MoneyClass('2', 'AAA').to('BBB')\nE           AttributeError: 'XMoney' object has no attribute 'to'\n\nsrc/money/tests/test_exchange.py:159: AttributeError\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nFAILED src/money/tests/test_exchange.py::TestSimpleBackend::test_money_conversion\nFAILED src/money/tests/test_exchange.py::TestMoneyConversion::test_unavailable_backend_conversion_error\nFAILED src/money/tests/test_exchange.py::TestMoneyConversion::test_unavailable_rate_conversion_error\nFAILED src/money/tests/test_exchange.py::TestXMoneyConversion::test_unavailable_backend_conversion_error\nFAILED src/money/tests/test_exchange.py::TestXMoneyConversion::test_unavailable_rate_conversion_error\nERROR src/money/tests/test_money.py\nERROR src/money/tests/test_xmoney.py\nERROR src-py2/money/tests/test_exchange.py\nERROR src-py2/money/tests/test_money.py\nERROR src-py2/money/tests/test_xmoney.py\n5 failed, 15 passed, 5 errors in 0.31s\n"
+  }
+ },
+ "verdict": {
+  "py313": {
+   "targets": 20,
+   "passing": 15,
+   "missing": [
+    "src.money.tests.test_exchange.TestMoneyConversion::test_unavailable_backend_conversion_error",
+    "src.money.tests.test_exchange.TestMoneyConversion::test_unavailable_rate_conversion_error",
+    "src.money.tests.test_exchange.TestSimpleBackend::test_money_conversion",
+    "src.money.tests.test_exchange.TestXMoneyConversion::test_unavailable_backend_conversion_error",
+    "src.money.tests.test_exchange.TestXMoneyConversion::test_unavailable_rate_conversion_error"
+   ],
+   "first_error": "ModuleNotFoundError: No module named 'babel'"
+  },
+  "py38": {
+   "targets": 20,
+   "passing": 15,
+   "missing": [
+    "src.money.tests.test_exchange.TestMoneyConversion::test_unavailable_backend_conversion_error",
+    "src.money.tests.test_exchange.TestMoneyConversion::test_unavailable_rate_conversion_error",
+    "src.money.tests.test_exchange.TestSimpleBackend::test_money_conversion",
+    "src.money.tests.test_exchange.TestXMoneyConversion::test_unavailable_backend_conversion_error",
+    "src.money.tests.test_exchange.TestXMoneyConversion::test_unavailable_rate_conversion_error"
+   ]
+  },
+  "protected_changed": [],
+  "diff_lines_changed": 436,
+  "files_changed": 2
+ }
+}

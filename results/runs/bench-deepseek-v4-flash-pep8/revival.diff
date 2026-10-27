@@ -1,0 +1,12 @@
+diff -ruN -x __pycache__ -x .pytest_cache a/pep8/dbg.py b/pep8/dbg.py
+--- a/pep8/dbg.py	1969-12-31 19:00:00.000000000 -0500
++++ b/pep8/dbg.py	2026-10-27 11:08:32.509758847 -0400
+@@ -0,0 +1,7 @@
++import sys
++sys.path.insert(0, '.')
++import pep8
++from testsuite.support import selftest
++style = pep8.StyleGuide(paths=['testsuite'], select='E,W', quiet=True)
++fail_s, done_s = selftest(style.options)
++print("fail", fail_s, "done", done_s)
+\ No newline at end of file

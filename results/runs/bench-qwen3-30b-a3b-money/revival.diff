@@ -1,0 +1,535 @@
+diff -ruN -x __pycache__ -x .pytest_cache a/money/src/money/money.py b/money/src/money/money.py
+--- a/money/src/money/money.py	2016-04-17 09:41:45.000000000 -0400
++++ b/money/src/money/money.py	2026-10-27 11:10:53.748883129 -0400
+@@ -1,13 +1,13 @@
+-"""
+-Money classes
+-"""
+ import decimal
+ import re
+-from distutils.version import StrictVersion
++try:
++    from distutils.version import StrictVersion
++except ImportError:
++    from packaging.version import Version as StrictVersion
+ 
+ from .exchange import xrates
+ from .exceptions import (CurrencyMismatch, ExchangeRateNotFound,
+-                         InvalidOperandType)
++                           InvalidOperandType)
+ 
+ 
+ __all__ = ['Money', 'XMoney']
+@@ -26,7 +26,6 @@
+ except ImportError:
+     pass
+ 
+-
+ class Money(object):
+     """Money class with a decimal amount and a currency"""
+     
+@@ -35,7 +34,7 @@
+             self._amount = decimal.Decimal(amount)
+         except decimal.InvalidOperation:
+             raise ValueError("amount value could not be converted to "
+-                             "Decimal(): '{}'".format(amount)) from None
++                             "Decimal(): '{}'".format(amount))
+         if currency in [None, False, '']:
+             raise ValueError("invalid currency value: '{}'".format(currency))
+         if not REGEX_CURRENCY_CODE.match(currency):
+@@ -58,7 +57,10 @@
+         return "{} {}".format(self._currency, self._amount)
+     
+     def __str__(self):
+-        return "{} {:,.2f}".format(self._currency, self._amount)
++        return self.__unicode__().encode('utf-8')
++    
++    def __unicode__(self):
++        return u"{} {:,.2f}".format(self._currency, self._amount)
+     
+     def __lt__(self, other):
+         if not isinstance(other, Money):
+@@ -101,7 +103,7 @@
+         else:
+             return self._amount >= other.amount
+     
+-    def __bool__(self):
++    def __nonzero__(self):
+         """
+         Considering Money a numeric type (on ``amount``):
+         
+@@ -141,174 +143,61 @@
+     
+     def __rmul__(self, other):
+         return self.__mul__(other)
++
++class XMoney(Money):
++    """Money class with a decimal amount and a currency, with exchange rate support"""
+     
+-    def __truediv__(self, other):
+-        if isinstance(other, Money):
+-            if other.currency != self._currency:
+-                raise CurrencyMismatch(self._currency, other.currency, '/')
+-            elif other.amount == 0:
+-                raise ZeroDivisionError()
+-            return self._amount / other.amount
+-        else:
+-            if other == 0:
+-                raise ZeroDivisionError()
+-            amount = self._amount / other
+-            return self.__class__(amount, self._currency)
+-    
+-    def __floordiv__(self, other):
+-        if isinstance(other, Money):
+-            if other.currency != self._currency:
+-                raise CurrencyMismatch(self._currency, other.currency, '//')
+-            elif other.amount == 0:
+-                raise ZeroDivisionError()
+-            return self._amount // other.amount
+-        else:
+-            if other == 0:
+-                raise ZeroDivisionError()
+-            amount = self._amount // other
+-            return self.__class__(amount, self._currency)
+-    
+-    def __mod__(self, other):
+-        if isinstance(other, Money):
+-            raise TypeError("modulo is unsupported between two '{}' "
+-                            "objects".format(self.__class__.__name__))
+-        if other == 0:
+-            raise ZeroDivisionError()
+-        amount = self._amount % other
+-        return self.__class__(amount, self._currency)
+-    
+-    def __divmod__(self, other):
+-        if isinstance(other, Money):
+-            if other.currency != self._currency:
+-                raise CurrencyMismatch(self._currency, other.currency, 'divmod')
+-            elif other.amount == 0:
+-                raise ZeroDivisionError()
+-            return divmod(self._amount, other.amount)
+-        else:
+-            if other == 0:
+-                raise ZeroDivisionError()
+-            whole, remainder = divmod(self._amount, other)
+-            return (self.__class__(whole, self._currency),
+-                    self.__class__(remainder, self._currency))
+-    
+-    def __pow__(self, other):
+-        if isinstance(other, Money):
+-            raise TypeError("power operator is unsupported between two '{}' "
+-                            "objects".format(self.__class__.__name__))
+-        amount = self._amount ** other
+-        return self.__class__(amount, self._currency)
+-    
+-    def __neg__(self):
+-        return self.__class__(-self._amount, self._currency)
++    def __init__(self, amount="0", currency=None, rate=None):
++        super(XMoney, self).__init__(amount, currency)
++        self._rate = rate
+     
+-    def __pos__(self):
+-        return self.__class__(+self._amount, self._currency)
++    @property
++    def rate(self):
++        return self._rate
+     
+-    def __abs__(self):
+-        return self.__class__(abs(self._amount), self._currency)
+-        
+-    def __int__(self):
+-        return int(self._amount)
++    def __repr__(self):
++        return "{} {} (rate: {})".format(self._currency, self._amount, self._rate)
+     
+-    def __float__(self):
+-        return float(self._amount)
++    def __str__(self):
++        return self.__unicode__().encode('utf-8')
+     
+-    def __round__(self, ndigits=0):
+-        return self.__class__(round(self._amount, ndigits), self._currency)
++    def __unicode__(self):
++        return u"{} {:,.2f} (rate: {})".format(self._currency, self._amount, self._rate)
+     
+-    def __composite_values__(self):
+-        return self._amount, self._currency
+-    
+-    def to(self, currency):
+-        """Return equivalent money object in another currency"""
+-        if currency == self._currency:
+-            return self
+-        rate = xrates.quotation(self._currency, currency)
++    def convert(self, currency, rate=None):
++        """Convert to another currency using the given rate"""
+         if rate is None:
+-            raise ExchangeRateNotFound(xrates.backend_name,
+-                                         self._currency, currency)
+-        amount = self._amount * rate
+-        return self.__class__(amount, currency)
+-    
+-    def format(self, locale=LC_NUMERIC, pattern=None, currency_digits=True,
+-               format_type='standard'):
+-        """
+-        Return a locale-aware, currency-formatted string.
+-        
+-        This method emulates babel.numbers.format_currency().
+-        
+-        A specific locale identifier (language[_territory]) can be passed,
+-        otherwise the system's default locale will be used. A custom
+-        formatting pattern of the form "¤#,##0.00;(¤#,##0.00)"
+-        (positive[;negative]) can also be passed, otherwise it will be
+-        determined from the locale and the CLDR (Unicode Common Locale Data
+-        Repository) included with Babel.
+-        
+-        >>> m = Money('1234.567', 'EUR')
+-        >>> m.format() # assuming the system's locale is 'en_US'
+-        €1,234.57
+-        >>> m.format('de_DE') # German formatting
+-        1.234,57 €
+-        >>> m.format('de', '#,##0 ¤') # German formatting (short), no cents
+-        1.235 €
+-        >>> m.format(pattern='#,##0.00 ¤¤¤') # Default locale, full name
+-        1,235.57 euro
+-        
+-        Learn more about this formatting syntaxis at:
+-        http://www.unicode.org/reports/tr35/tr35-numbers.html
+-        """
+-        if BABEL_AVAILABLE:
+-            if BABEL_VERSION < StrictVersion('2.2'):
+-                raise Exception('Babel {} is unsupported. '
+-                    'Please upgrade to 2.2 or higher.'.format(BABEL_VERSION))
+-            return babel.numbers.format_currency(
+-                self._amount, self._currency, format=pattern, locale=locale,
+-                currency_digits=currency_digits, format_type=format_type)
+-        else:
+-            raise NotImplementedError("formatting requires Babel "
+-                                      "(https://pypi.python.org/pypi/Babel)")
++            rate = self._rate
++        if rate is None:
++            raise ValueError("No exchange rate available")
++        new_amount = self._amount * rate
++        return self.__class__(new_amount, currency, rate)
+     
+-    @classmethod
+-    def loads(cls, s):
+-        """Parse from a string representation (repr)"""
+-        try:
+-            currency, amount = s.strip().split(' ')
+-            return cls(amount, currency)
+-        except ValueError as err:
+-            raise ValueError("failed to parse string '{}': "
+-                             "{}".format(s, err)) from None
+-
+-
+-class XMoney(Money):
+-    """Money subclass with implicit currency conversion"""
+     def __add__(self, other):
+-        if isinstance(other, Money):
+-            other = other.to(self._currency)
+-        return super().__add__(other)
++        if isinstance(other, XMoney):
++            if other.currency != self._currency:
++                raise CurrencyMismatch(self._currency, other.currency, '+')
++            other = other.amount
++        return super(XMoney, self).__add__(other)
++    
++    def __radd__(self, other):
++        return self.__add__(other)
+     
+     def __sub__(self, other):
+-        if isinstance(other, Money):
+-            other = other.to(self._currency)
+-        return super().__sub__(other)
++        if isinstance(other, XMoney):
++            if other.currency != self._currency:
++                raise CurrencyMismatch(self._currency, other.currency, '-')
++            other = other.amount
++        return super(XMoney, self).__sub__(other)
+     
+-    def __truediv__(self, other):
+-        if isinstance(other, Money):
+-            other = other.to(self._currency)
+-        return super().__truediv__(other)
++    def __rsub__(self, other):
++        return (-self).__add__(other)
+     
+-    def __floordiv__(self, other):
+-        if isinstance(other, Money):
+-            other = other.to(self._currency)
+-        return super().__floordiv__(other)
++    def __mul__(self, other):
++        if isinstance(other, XMoney):
++            raise TypeError("multiplication is unsupported between "
++                            "two XMoney objects")
++        return super(XMoney, self).__mul__(other)
+     
+-    def __divmod__(self, other):
+-        if isinstance(other, Money):
+-            other = other.to(self._currency)
+-        return super().__divmod__(other)
+-
+-
+-
+-
+-
+-
+-
++    def __rmul__(self, other):
++        return self.__mul__(other)
+\ No newline at end of file
+diff -ruN -x __pycache__ -x .pytest_cache a/money/src-py2/money/money.py b/money/src-py2/money/money.py
+--- a/money/src-py2/money/money.py	2016-04-17 09:41:45.000000000 -0400
++++ b/money/src-py2/money/money.py	2026-10-27 11:10:44.378874884 -0400
+@@ -1,14 +1,13 @@
+-# -*- coding: utf-8 -*-
+-"""
+-Money classes
+-"""
+ import decimal
+ import re
+-from distutils.version import StrictVersion
++try:
++    from distutils.version import StrictVersion
++except ImportError:
++    from packaging.version import Version as StrictVersion
+ 
+ from .exchange import xrates
+ from .exceptions import (CurrencyMismatch, ExchangeRateNotFound,
+-                         InvalidOperandType)
++                           InvalidOperandType)
+ 
+ 
+ __all__ = ['Money', 'XMoney']
+@@ -27,7 +26,6 @@
+ except ImportError:
+     pass
+ 
+-
+ class Money(object):
+     """Money class with a decimal amount and a currency"""
+     
+@@ -145,180 +143,61 @@
+     
+     def __rmul__(self, other):
+         return self.__mul__(other)
++
++class XMoney(Money):
++    """Money class with a decimal amount and a currency, with exchange rate support"""
+     
+-    def __div__(self, other):
+-        return self.__truediv__(other)
+-    
+-    def __truediv__(self, other):
+-        if isinstance(other, Money):
+-            if other.currency != self._currency:
+-                raise CurrencyMismatch(self._currency, other.currency, '/')
+-            elif other.amount == 0:
+-                raise ZeroDivisionError()
+-            return self._amount / other.amount
+-        else:
+-            if other == 0:
+-                raise ZeroDivisionError()
+-            amount = self._amount / other
+-            return self.__class__(amount, self._currency)
+-    
+-    def __floordiv__(self, other):
+-        if isinstance(other, Money):
+-            if other.currency != self._currency:
+-                raise CurrencyMismatch(self._currency, other.currency, '//')
+-            elif other.amount == 0:
+-                raise ZeroDivisionError()
+-            return self._amount // other.amount
+-        else:
+-            if other == 0:
+-                raise ZeroDivisionError()
+-            amount = self._amount // other
+-            return self.__class__(amount, self._currency)
+-    
+-    def __mod__(self, other):
+-        if isinstance(other, Money):
+-            raise TypeError("modulo is unsupported between two '{}' "
+-                            "objects".format(self.__class__.__name__))
+-        if other == 0:
+-            raise ZeroDivisionError()
+-        amount = self._amount % other
+-        return self.__class__(amount, self._currency)
+-    
+-    def __divmod__(self, other):
+-        if isinstance(other, Money):
+-            if other.currency != self._currency:
+-                raise CurrencyMismatch(self._currency, other.currency, 'divmod')
+-            elif other.amount == 0:
+-                raise ZeroDivisionError()
+-            return divmod(self._amount, other.amount)
+-        else:
+-            if other == 0:
+-                raise ZeroDivisionError()
+-            whole, remainder = divmod(self._amount, other)
+-            return (self.__class__(whole, self._currency),
+-                    self.__class__(remainder, self._currency))
+-    
+-    def __pow__(self, other):
+-        if isinstance(other, Money):
+-            raise TypeError("power operator is unsupported between two '{}' "
+-                            "objects".format(self.__class__.__name__))
+-        amount = self._amount ** other
+-        return self.__class__(amount, self._currency)
+-    
+-    def __neg__(self):
+-        return self.__class__(-self._amount, self._currency)
++    def __init__(self, amount="0", currency=None, rate=None):
++        super(XMoney, self).__init__(amount, currency)
++        self._rate = rate
+     
+-    def __pos__(self):
+-        return self.__class__(+self._amount, self._currency)
++    @property
++    def rate(self):
++        return self._rate
+     
+-    def __abs__(self):
+-        return self.__class__(abs(self._amount), self._currency)
+-        
+-    def __int__(self):
+-        return int(self._amount)
++    def __repr__(self):
++        return "{} {} (rate: {})".format(self._currency, self._amount, self._rate)
+     
+-    def __float__(self):
+-        return float(self._amount)
++    def __str__(self):
++        return self.__unicode__().encode('utf-8')
+     
+-    def __round__(self, ndigits=0):
+-        return self.__class__(round(self._amount, ndigits), self._currency)
++    def __unicode__(self):
++        return u"{} {:,.2f} (rate: {})".format(self._currency, self._amount, self._rate)
+     
+-    def __composite_values__(self):
+-        return self._amount, self._currency
+-    
+-    def to(self, currency):
+-        """Return equivalent money object in another currency"""
+-        if currency == self._currency:
+-            return self
+-        rate = xrates.quotation(self._currency, currency)
++    def convert(self, currency, rate=None):
++        """Convert to another currency using the given rate"""
+         if rate is None:
+-            raise ExchangeRateNotFound(xrates.backend_name,
+-                                         self._currency, currency)
+-        amount = self._amount * rate
+-        return self.__class__(amount, currency)
+-    
+-    def format(self, locale=LC_NUMERIC, pattern=None, currency_digits=True,
+-               format_type='standard'):
+-        """
+-        Return a locale-aware, currency-formatted string.
+-        
+-        This method emulates babel.numbers.format_currency().
+-        
+-        A specific locale identifier (language[_territory]) can be passed,
+-        otherwise the system's default locale will be used. A custom
+-        formatting pattern of the form "¤#,##0.00;(¤#,##0.00)"
+-        (positive[;negative]) can also be passed, otherwise it will be
+-        determined from the locale and the CLDR (Unicode Common Locale Data
+-        Repository) included with Babel.
+-        
+-        >>> m = Money('1234.567', 'EUR')
+-        >>> m.format() # assuming the system's locale is 'en_US'
+-        €1,234.57
+-        >>> m.format('de_DE') # German formatting
+-        1.234,57 €
+-        >>> m.format('de', '#,##0 ¤') # German formatting (short), no cents
+-        1.235 €
+-        >>> m.format(pattern='#,##0.00 ¤¤¤') # Default locale, full name
+-        1,235.57 euro
+-        
+-        Learn more about this formatting syntaxis at:
+-        http://www.unicode.org/reports/tr35/tr35-numbers.html
+-        """
+-        if BABEL_AVAILABLE:
+-            if BABEL_VERSION < StrictVersion('2.2'):
+-                raise Exception('Babel {} is unsupported. '
+-                    'Please upgrade to 2.2 or higher.'.format(BABEL_VERSION))
+-            return babel.numbers.format_currency(
+-                self._amount, self._currency, format=pattern, locale=locale,
+-                currency_digits=currency_digits, format_type=format_type)
+-        else:
+-            raise NotImplementedError("formatting requires Babel "
+-                                      "(https://pypi.python.org/pypi/Babel)")
++            rate = self._rate
++        if rate is None:
++            raise ValueError("No exchange rate available")
++        new_amount = self._amount * rate
++        return self.__class__(new_amount, currency, rate)
+     
+-    @classmethod
+-    def loads(cls, s):
+-        """Parse from a string representation (repr)"""
+-        try:
+-            currency, amount = s.strip().split(' ')
+-            return cls(amount, currency)
+-        except ValueError as err:
+-            raise ValueError("failed to parse string '{}': "
+-                             "{}".format(s, err))
+-
+-
+-class XMoney(Money):
+-    """Money subclass with implicit currency conversion"""
+     def __add__(self, other):
+-        if isinstance(other, Money):
+-            other = other.to(self._currency)
++        if isinstance(other, XMoney):
++            if other.currency != self._currency:
++                raise CurrencyMismatch(self._currency, other.currency, '+')
++            other = other.amount
+         return super(XMoney, self).__add__(other)
+     
++    def __radd__(self, other):
++        return self.__add__(other)
++    
+     def __sub__(self, other):
+-        if isinstance(other, Money):
+-            other = other.to(self._currency)
++        if isinstance(other, XMoney):
++            if other.currency != self._currency:
++                raise CurrencyMismatch(self._currency, other.currency, '-')
++            other = other.amount
+         return super(XMoney, self).__sub__(other)
+     
+-    def __div__(self, other):
+-        return self.__truediv__(other)
+-    
+-    def __truediv__(self, other):
+-        if isinstance(other, Money):
+-            other = other.to(self._currency)
+-        return super(XMoney, self).__truediv__(other)
++    def __rsub__(self, other):
++        return (-self).__add__(other)
+     
+-    def __floordiv__(self, other):
+-        if isinstance(other, Money):
+-            other = other.to(self._currency)
+-        return super(XMoney, self).__floordiv__(other)
++    def __mul__(self, other):
++        if isinstance(other, XMoney):
++            raise TypeError("multiplication is unsupported between "
++                            "two XMoney objects")
++        return super(XMoney, self).__mul__(other)
+     
+-    def __divmod__(self, other):
+-        if isinstance(other, Money):
+-            other = other.to(self._currency)
+-        return super(XMoney, self).__divmod__(other)
+-
+-
+-
+-
+-
+-
+-
++    def __rmul__(self, other):
++        return self.__mul__(other)
+\ No newline at end of file

@@ -1,0 +1,42 @@
+{
+ "project": "logutils",
+ "run": "round2-deepseek-v4-flash-logutils",
+ "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+ "status": "REVIVED",
+ "attempts": 1,
+ "seance": {
+  "run": "round2-deepseek-v4-flash-logutils",
+  "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+  "steps": 10,
+  "input_tokens": 106497,
+  "output_tokens": 2676,
+  "usd": 0.01565886,
+  "stopped": "finished",
+  "last_test": {
+   "targets": 31,
+   "targets_passing": 31,
+   "all_passed": 31,
+   "collected": 34,
+   "timed_out": false,
+   "first_error": "ModuleNotFoundError: No module named 'redis'",
+   "failing_targets": [],
+   "pytest_tail": "ls/testing.py:7: PytestCollectionWarning: cannot collect test class 'TestHandler' because it has a __init__ constructor (from: logutils/testing.py)\n    class TestHandler(BufferingHandler):\n\nlogutils/testing.py:7\n  <seance>/work/revive/round2-deepseek-v4-flash-logutils/logutils/testing.py:7: PytestCollectionWarning: cannot collect test class 'TestHandler' because it has a __init__ constructor (from: tests/test_adapter.py)\n    class TestHandler(BufferingHandler):\n\nlogutils/testing.py:7\n  <seance>/work/revive/round2-deepseek-v4-flash-logutils/logutils/testing.py:7: PytestCollectionWarning: cannot collect test class 'TestHandler' because it has a __init__ constructor (from: tests/test_dictconfig.py)\n    class TestHandler(BufferingHandler):\n\nlogutils/testing.py:7\n  <seance>/work/revive/round2-deepseek-v4-flash-logutils/logutils/testing.py:7: PytestCollectionWarning: cannot collect test class 'TestHandler' because it has a __init__ constructor (from: tests/test_queue.py)\n    class TestHandler(BufferingHandler):\n\nlogutils/testing.py:7\n  <seance>/work/revive/round2-deepseek-v4-flash-logutils/logutils/testing.py:7: PytestCollectionWarning: cannot collect test class 'TestHandler' because it has a __init__ constructor (from: tests/test_testing.py)\n    class TestHandler(BufferingHandler):\n\ntests/test_dictconfig.py::testHandler\n  <seance>/envs/py313/lib/python3.13/site-packages/_pytest/python.py:163: PytestReturnNotNoneWarning: Expected None, but tests/test_dictconfig.py::testHandler returned <TestHandler (NOTSET)>, which will be an error in a future version of pytest.  Did you mean to use `assert` instead of `return`?\n    warnings.warn(\n\ntests/test_queue.py::QueueTest::test_multiple\ntests/test_queue.py::QueueTest::test_partial\ntests/test_queue.py::QueueTest::test_simple\n  <seance>/work/revive/round2-deepseek-v4-flash-logutils/logutils/queue.py:144: DeprecationWarning: setDaemon() is deprecated, set the daemon attribute instead\n    t.setDaemon(True)\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n---------------- generated xml file: /tmp/<tmp>/junit.xml ----------------\n=========================== short test summary info ============================\nFAILED tests/test_adapter.py::AdapterTest::test_hashandlers - AssertionError:...\nERROR tests/test_redis.py\n1 failed, 31 passed, 1 skipped, 9 warnings, 1 error in 0.26s\n"
+  }
+ },
+ "verdict": {
+  "py313": {
+   "targets": 31,
+   "passing": 31,
+   "missing": [],
+   "first_error": "ModuleNotFoundError: No module named 'redis'"
+  },
+  "py38": {
+   "targets": 31,
+   "passing": 31,
+   "missing": []
+  },
+  "protected_changed": [],
+  "diff_lines_changed": 9,
+  "files_changed": 1
+ }
+}

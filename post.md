@@ -100,8 +100,10 @@ The six tools are built with `createTool` and jailed to the package directory. `
 `write_file` refuse anything under `test/` or `tests/`, any test file, `conftest.py`, and the
 pytest/tox/setup config files. The verify step also hashes all of those against the pristine
 copy afterwards. `run_tests` runs the original suite on 3.13 and tells the agent how many target
-tests pass, which ones still fail, and the end of pytest's output. There's no shell. The medium
-can't install anything, and it can't read my environment.
+tests pass, which ones still fail, and the end of pytest's output. There's no shell and no network
+tool, and the test subprocess gets an environment with the inference key and other API variables
+stripped out. It isn't a sandbox, though: code the medium writes does run when the tests run,
+which is one reason all of this ran on a batch node rather than my laptop.
 
 Every model step lands in `onStepFinish`, where its token usage is priced from Nebius's live
 `/v1/models` prices and appended to a ledger file before the next step starts. A run is capped at
@@ -111,11 +113,11 @@ Every model step lands in `onStepFinish`, where its token usage is priced from N
 
 ```ts
 export async function seanceWorkflow(a: { project: string; model: string; run: string }) {
-  const prep = await quick.prepare({ project: a.project, run: a.run });        // copy the pristine sdist
-  const result = await medium.seance({ ...a, root: prep.root, brief: prep.brief }); // the agent loop
-  const verdict = await quick.verify({ ...a, root: prep.root, pristine: prep.pristine });
+  const prep = await quick.prepare({ project: a.project, run: a.run });
+  const result = await medium.seance({ project: a.project, run: a.run, model: a.model, root: prep.root, brief: prep.brief });
+  const verdict = await quick.verify({ project: a.project, run: a.run, root: prep.root, pristine: prep.pristine });
   const attempts = await quick.countAttempts({ run: a.run });
-  return await quick.epitaph({ ...a, seance: result, verdict, attempts });
+  return await quick.epitaph({ project: a.project, run: a.run, model: a.model, seance: result, verdict, attempts });
 }
 ```
 
@@ -138,7 +140,7 @@ seconds later it starts a second worker. Here's what happened:
 ```
 
 The ledger has both attempts' calls, 0.84 cents in total, because each step was written down
-before the kill. Attempt 2 was told that an earlier attempt had been interrupted and to start with
+before the kill. (The epitaph's own cost row counts only attempt 2; the ledger is the full bill.) Attempt 2 was told that an earlier attempt had been interrupted and to start with
 `run_tests`. The full event history is
 [in the repo](https://github.com/Bowen1314/pip-seance/tree/main/results/runs/chaos-deepseek-v4-flash-money).
 
@@ -173,9 +175,10 @@ it's also the most honest result in the table: the most downloaded ghost wasn't 
 **The cure and the clumsy hands.** cookies died because one of its regexes has `(?ix)`, a global
 flag group, in the middle of a pattern, which has been an error since Python 3.11. DeepSeek
 diagnosed it correctly and turned it into a scoped group, `(?ix:`. Then it had to close the
-parenthesis at the other end of a multi-line pattern, and 8 of its next 9 edits were rejected
-because the text it quoted wasn't in the file. It kept indenting the code two spaces too deep. My
-guess is that it was counting the two-space gutter after my `read_file` line numbers. The budget
+parenthesis at the other end of a multi-line pattern, and all 8 of its next edits were rejected
+because the text it quoted wasn't in the file. The indentation was off every time, and the last
+five were each exactly two spaces too deep: remove two spaces per line and every one of them
+matches. My guess is that it was counting the two-space gutter after my `read_file` line numbers. The budget
 ran out with the parenthesis still open, and now the package didn't even import on 3.8. A failed
 seance can leave the body worse than it found it. That's why each one works on a copy and checks
 3.8 at the end.

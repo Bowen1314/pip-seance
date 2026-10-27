@@ -65,8 +65,8 @@ What the numbers say:
   left code that no longer passes on Python 3.8 either. On cookies, DeepSeek found the cure (turn
   `(?ix)` into a scoped `(?ix:...)` group), opened the parenthesis, and spent the rest of its budget
   failing to close it: 8 of its 9 edits were rejected because the text it quoted wasn't in the
-  file. It kept indenting the code by two extra spaces; my guess is it counted the two-space gutter
-  after `read_file`'s line numbers. Seances work on a copy, so nothing real was harmed.
+  file. The last five were each exactly two spaces too deep; my guess is it counted the two-space
+  gutter after `read_file`'s line numbers. Seances work on a copy, so nothing real was harmed.
 - **The agent is only as good as what it sees.** In the first bench, logutils' real error
   (`AttributeError: module 'logging' has no attribute '_acquireLock'`) was hidden: my `run_tests`
   tool led with an unrelated `No module named 'redis'` from a test that was never a target, and the

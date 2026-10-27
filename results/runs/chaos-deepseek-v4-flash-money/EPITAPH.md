@@ -16,6 +16,11 @@
 | activity attempts | 2 |
 | stopped because | finished |
 
+> Note added after the run: this run had 2 attempts (worker A was SIGKILLed after step 4). The cost,
+> steps and token rows above count attempt 2 only. The ledger total for the run, both attempts, is
+> **$0.0084** (12 model calls); see `ledger/spend.jsonl`, rows with `"run":"chaos-deepseek-v4-flash-money"`.
+> Later versions of `epitaph()` print both numbers.
+
 ## Cause of death on Python 3.13
 
 ```

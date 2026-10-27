@@ -4,7 +4,7 @@ import { execFile } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { promisify } from 'node:util';
-import { GHOSTS, PY313, PY38, PYTHON, REPO, RUNS, WORK } from './config.js';
+import { GHOSTS, LEDGER, PY313, PY38, PYTHON, REPO, RUNS, WORK } from './config.js';
 import { summon, type SeanceResult } from './medium.js';
 
 const run = promisify(execFile);
@@ -90,6 +90,12 @@ export async function verify(a: { project: string; run: string; root: string; pr
   };
 }
 
+function ledgerTotal(run: string) {
+  if (!fs.existsSync(LEDGER)) return 0;
+  return fs.readFileSync(LEDGER, 'utf8').split('\n').filter(Boolean).map((l) => JSON.parse(l))
+    .filter((r) => r.run === run).reduce((t, r) => t + (r.usd ?? 0), 0);
+}
+
 export async function epitaph(a: { project: string; run: string; model: string; seance: SeanceResult; verdict: any; attempts: number }) {
   const g = loadGhost(a.project);
   const v = a.verdict;
@@ -109,8 +115,9 @@ export async function epitaph(a: { project: string; run: string; model: string; 
     `| passing on 3.8 after (did we break the past?) | ${v.py38.passing}/${v.py38.targets} |`,
     `| protected files changed | ${v.protected_changed.length ? v.protected_changed.join(', ') : 'none'} |`,
     `| files / lines changed | ${v.files_changed} / ${v.diff_lines_changed} |`,
-    `| model steps, tokens in/out | ${a.seance.steps}, ${a.seance.input_tokens.toLocaleString('en-US')} / ${a.seance.output_tokens.toLocaleString('en-US')} |`,
-    `| cost | $${a.seance.usd.toFixed(4)} |`,
+    `| model steps, tokens in/out (this attempt) | ${a.seance.steps}, ${a.seance.input_tokens.toLocaleString('en-US')} / ${a.seance.output_tokens.toLocaleString('en-US')} |`,
+    `| cost, this attempt | $${a.seance.usd.toFixed(4)} |`,
+    `| cost, all attempts (ledger) | $${ledgerTotal(a.run).toFixed(4)} |`,
     `| activity attempts | ${a.attempts} |`,
     `| stopped because | ${a.seance.stopped}${a.seance.error ? ` (${a.seance.error})` : ''} |`,
     '',

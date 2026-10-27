@@ -1,0 +1,31 @@
+run                                               3.13 recorded  3.13 replay  3.8 recorded  3.8 replay  protected
+bench-deepseek-v4-flash-cookies                       0/66           0            0/66          0       none  OK
+bench-deepseek-v4-flash-kafka                        41/41          41           41/41         41       none  OK
+bench-deepseek-v4-flash-logutils                     16/31          16           31/31         31       none  OK
+bench-deepseek-v4-flash-money                        20/20          20           20/20         20       none  OK
+bench-deepseek-v4-flash-null                          6/6            6            6/6           6       none  OK
+bench-deepseek-v4-flash-paver                        39/99          39           39/99         39       none  OK
+bench-deepseek-v4-flash-pep8                         25/29          25           29/29         29       none  OK
+bench-deepseek-v4-flash-python3-ldap                 36/36          36           36/36         36       none  OK
+bench-deepseek-v4-flash-pyxb                        153/736        153          736/736       736       none  OK
+bench-deepseek-v4-flash-zipfile36                   168/168        168          168/168       168       none  OK
+bench-glm-5.3-flash-cookies                           0/66           0           66/66         66       none  OK
+bench-glm-5.3-flash-logutils                         16/31          16           31/31         31       none  OK
+bench-glm-5.3-flash-pep8                             25/29          25           29/29         29       none  OK
+bench-glm-5.3-flash-pyxb                             10/736         10          736/736       736       none  OK
+bench-qwen3-30b-a3b-cookies                           0/66           0           66/66         66       none  OK
+bench-qwen3-30b-a3b-kafka                             0/41           0           41/41         41       none  OK
+bench-qwen3-30b-a3b-logutils                         16/31          16           31/31         31       none  OK
+bench-qwen3-30b-a3b-money                            15/20          15           15/20         15       none  OK
+bench-qwen3-30b-a3b-null                              6/6            6            6/6           6       none  OK
+bench-qwen3-30b-a3b-paver                            39/99          39           99/99         99       none  OK
+bench-qwen3-30b-a3b-pep8                             25/29          25           29/29         29       none  OK
+bench-qwen3-30b-a3b-python3-ldap                     15/36          15           36/36         36       none  OK
+bench-qwen3-30b-a3b-pyxb                             10/736         10          736/736       736       none  OK
+bench-qwen3-30b-a3b-zipfile36                         0/168          0          168/168       168       none  OK
+captest-qwen3-30b-a3b-kafka                           0/41           0           41/41         41       none  OK
+chaos-deepseek-v4-flash-money                        20/20          20           20/20         20       none  OK
+round2-deepseek-v4-flash-cookies                      0/66           0            0/66          0       none  OK
+round2-deepseek-v4-flash-logutils                    31/31          31           31/31         31       none  OK
+smoke-deepseek-v4-flash-money                        20/20          20           20/20         20       none  OK
+mismatches: 0

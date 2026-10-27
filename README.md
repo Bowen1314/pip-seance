@@ -147,7 +147,7 @@ creates):
 python3 seance/replay.py --runs results/runs --work work --py38 "$PWD/envs/py38/bin/python" --py313 "$PWD/envs/py313/bin/python"
 ```
 
-On 27 October all 22 runs that existed at the time replayed with identical numbers (`mismatches: 0`).
+On 27 October all 29 runs replayed with identical numbers ([`results/replay.log`](results/replay.log), `mismatches: 0`).
 Note that the census depends on the day: the download list and PyPI change over time.
 
 ## Caveats
